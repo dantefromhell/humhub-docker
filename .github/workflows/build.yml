@@ -38,8 +38,8 @@ jobs:
     - name: Upload image archive
       uses: actions/upload-artifact@v2
       with:
-        name: build-${{ matrix.version }}-${{ env.GIT_REV }}
-        path: build-${{ matrix.version }}-${{ env.GIT_REV }}.tar.gz
+        name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}
+        path: build-${{ matrix.version }}-git-${{ env.GIT_REV }}.tar.gz
   build_variants:
     needs: build_bases
     runs-on: ubuntu-latest
