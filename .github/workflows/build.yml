@@ -22,6 +22,10 @@ jobs:
         HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9\.]+) ${{ matrix.version }}/ {print $1}' versions.txt)"
         export HUMHUB_VERSION
         echo "HUMHUB_VERSION=$HUMHUB_VERSION" >> "$GITHUB_ENV"
+        GIT_REF=$(git rev-parse --short HEAD)
+        export GIT_REF
+        echo "GIT_REF:          ${GIT_REF}"
+        echo "GITHUB_SHA_SHORT: ${GITHUB_SHA_SHORT}"
     - name: Build and push docker image
       run: |
         docker build \
