@@ -1,5 +1,3 @@
-ARG HUMHUB_VERSION
-ARG VCS_REF
 ARG BUILD_DEPS="\
     ca-certificates \
     nodejs \
