@@ -65,7 +65,7 @@ jobs:
         name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}
     - name: Build and push docker image
       run: |
-        docker load --input build-${{ matrix.version }}-git-${GIT_REV}.tar.gz
+        docker load --input "build-${{ matrix.version }}-git-${GIT_REV}.tar.gz"
         docker build \
           --build-arg HUMHUB_VERSION="${HUMHUB_VERSION}" \
           --build-arg VCS_REF="${GIT_REV}" \
@@ -102,7 +102,7 @@ jobs:
         name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}-allinone
     - name: Load images 
       run: |
-        docker load --input build-${{ matrix.version }}-git-${GIT_REV}-allinone.tar.gz
+        docker load --input "build-${{ matrix.version }}-git-${GIT_REV}-allinone.tar.gz"
     - name: replace image
       run: sed -i "s/docker.io\/mriedmann\/humhub:latest/ghcr.io\/${GITHUB_REPOSITORY_OWNER}\/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-allinone/g" docker-compose.yml
     - name: Spin up services
@@ -145,8 +145,8 @@ jobs:
         name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}-nginx
     - name: Load images 
       run: |
-        docker load --input build-${{ matrix.version }}-git-${GIT_REV}-phponly.tar.gz
-        docker load --input build-${{ matrix.version }}-git-${GIT_REV}-nginx.tar.gz
+        docker load --input "build-${{ matrix.version }}-git-${GIT_REV}-phponly.tar.gz"
+        docker load --input "build-${{ matrix.version }}-git-${GIT_REV}-nginx.tar.gz"
     - name: replace image
       run: |
         sed -i "s/docker.io\/mriedmann\/humhub:stable-nginx/ghcr.io\/${GITHUB_REPOSITORY_OWNER}\/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-nginx/g" docker-compose.prod.yml
@@ -191,6 +191,6 @@ jobs:
         name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}-${{ matrix.target }}
     - name: Load, retag and Push images 
       run: |
-        docker load --input build-${{ matrix.version }}-git-${GIT_REV}-${{ matrix.target }}.tar.gz
+        docker load --input "build-${{ matrix.version }}-git-${GIT_REV}-${{ matrix.target }}.tar.gz"
         docker tag "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-${{ matrix.target }}" "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub-${{ matrix.target }}:${HUMHUB_VERSION}-git-${GIT_REV}"
-        docker push "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub-${{ matrix.target }}:${HUMHUB_VERSION}-git-${GIT_REV}
+        docker push "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub-${{ matrix.target }}:${HUMHUB_VERSION}-git-${GIT_REV}"
