@@ -22,15 +22,11 @@ jobs:
         HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9\.]+) ${{ matrix.version }}/ {print $1}' versions.txt)"
         export HUMHUB_VERSION
         echo "HUMHUB_VERSION=$HUMHUB_VERSION" >> "$GITHUB_ENV"
-        VCS_REF2="$(git rev-parse --short HEAD)"
-        export VCS_REF2
-        echo "VCS_REF2=$VCS_REF2"
-        echo "GITHUB_SHA_SHORT=$GITHUB_SHA_SHORT"
     - name: Build and push docker image
       run: |
         docker build \
           --build-arg HUMHUB_VERSION="${HUMHUB_VERSION}" \
-          --build-arg VCS_REF="$(git rev-parse --short HEAD)" \
+          --build-arg VCS_REF="${GITHUB_SHA_SHORT}" \
           --build-arg BUILD_DATE="$(date -u +'%Y-%m-%dT%H:%M:%SZ')" \
           --target base \
           -t "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-base" \
@@ -66,7 +62,7 @@ jobs:
         docker load --input build-${{ matrix.version }}.tar.gz
         docker build \
           --build-arg HUMHUB_VERSION="${HUMHUB_VERSION}" \
-          --build-arg VCS_REF="$(git rev-parse --short HEAD)" \
+          --build-arg VCS_REF="${GITHUB_SHA_SHORT}" \
           --target "humhub_${{ matrix.target }}" \
           -t "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-${{ matrix.target }}" \
           .
