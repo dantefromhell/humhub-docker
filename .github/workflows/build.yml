@@ -22,15 +22,16 @@ jobs:
         HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9\.]+) ${{ matrix.version }}/ {print $1}' versions.txt)"
         export HUMHUB_VERSION
         echo "HUMHUB_VERSION=$HUMHUB_VERSION" >> "$GITHUB_ENV"
-        GIT_REF=$(git rev-parse --short HEAD)
-        export GIT_REF
-        echo "GIT_REF:          ${GIT_REF}"
-        echo "GITHUB_SHA_SHORT: ${GITHUB_SHA_SHORT}"
+        GIT_REV=$(git rev-parse --short HEAD)
+        export GIT_REV
+        echo "GIT_REV=$GIT_REV" >> "$GITHUB_ENV"
+        echo "GIT_REV:          ${GIT_REV}"
+        echo "GITHUB_SHA_SHORT: ${GITHUB_SHA_SHORT::7}"
     - name: Build and push docker image
       run: |
         docker build \
           --build-arg HUMHUB_VERSION="${HUMHUB_VERSION}" \
-          --build-arg VCS_REF="${GITHUB_SHA_SHORT}" \
+          --build-arg VCS_REF="${GIT_REV}" \
           --build-arg BUILD_DATE="$(date -u +'%Y-%m-%dT%H:%M:%SZ')" \
           --target base \
           -t "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-base" \
@@ -57,6 +58,9 @@ jobs:
         HUMHUB_VERSION=$(awk -e '$0 ~ /^([0-9\.]+) ${{ matrix.version }}/ {print $1}' versions.txt)
         export HUMHUB_VERSION
         echo "HUMHUB_VERSION=$HUMHUB_VERSION" >> "$GITHUB_ENV"
+        GIT_REV=$(git rev-parse --short HEAD)
+        export GIT_REV
+        echo "GIT_REV=$GIT_REV" >> "$GITHUB_ENV"
     - name: Download image archive
       uses: actions/download-artifact@v2
       with:
@@ -66,7 +70,7 @@ jobs:
         docker load --input build-${{ matrix.version }}.tar.gz
         docker build \
           --build-arg HUMHUB_VERSION="${HUMHUB_VERSION}" \
-          --build-arg VCS_REF="${GITHUB_SHA_SHORT}" \
+          --build-arg VCS_REF="${GIT_REV}" \
           --target "humhub_${{ matrix.target }}" \
           -t "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-${{ matrix.target }}" \
           .
