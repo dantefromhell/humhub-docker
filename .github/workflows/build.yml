@@ -25,8 +25,6 @@ jobs:
         GIT_REV=$(git rev-parse --short HEAD)
         export GIT_REV
         echo "GIT_REV=$GIT_REV" >> "$GITHUB_ENV"
-        echo "GIT_REV:          ${GIT_REV}"
-        echo "GITHUB_SHA_SHORT: ${GITHUB_SHA_SHORT::7}"
     - name: Build and push docker image
       run: |
         docker build \
@@ -34,14 +32,14 @@ jobs:
           --build-arg VCS_REF="${GIT_REV}" \
           --build-arg BUILD_DATE="$(date -u +'%Y-%m-%dT%H:%M:%SZ')" \
           --target base \
-          -t "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-base" \
+          -t "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-base" \
           .
-        docker save "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-base" | gzip > build-${{ matrix.version }}.tar.gz
+        docker save "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-base" | gzip > build-${{ matrix.version }}-git-${GIT_REV}.tar.gz
     - name: Upload image archive
       uses: actions/upload-artifact@v2
       with:
-        name: build-${{ matrix.version }}
-        path: build-${{ matrix.version }}.tar.gz
+        name: build-${{ matrix.version }}-${{ env.GIT_REV }}
+        path: build-${{ matrix.version }}-${{ env.GIT_REV }}.tar.gz
   build_variants:
     needs: build_bases
     runs-on: ubuntu-latest
@@ -64,22 +62,22 @@ jobs:
     - name: Download image archive
       uses: actions/download-artifact@v2
       with:
-        name: build-${{ matrix.version }}
+        name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}
     - name: Build and push docker image
       run: |
-        docker load --input build-${{ matrix.version }}.tar.gz
+        docker load --input build-${{ matrix.version }}-git-${GIT_REV}.tar.gz
         docker build \
           --build-arg HUMHUB_VERSION="${HUMHUB_VERSION}" \
           --build-arg VCS_REF="${GIT_REV}" \
           --target "humhub_${{ matrix.target }}" \
-          -t "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-${{ matrix.target }}" \
+          -t "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-${{ matrix.target }}" \
           .
-        docker save "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-${{ matrix.target }}" | gzip > "build-${{ matrix.version }}-${{ matrix.target }}.tar.gz"
+        docker save "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-${{ matrix.target }}" | gzip > "build-${{ matrix.version }}-git-${{ env.GIT_REV }}-${{ matrix.target }}.tar.gz"
     - name: Upload image archive
       uses: actions/upload-artifact@v2
       with:
-        name: build-${{ matrix.version }}-${{ matrix.target }}
-        path: build-${{ matrix.version }}-${{ matrix.target }}.tar.gz
+        name: build-${{ matrix.version }}-git-${{ matrix.target }}
+        path: build-${{ matrix.version }}-git-${{ matrix.target }}.tar.gz
   test_aio:
     needs: build_variants
     runs-on: ubuntu-latest
