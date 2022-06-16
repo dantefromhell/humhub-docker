@@ -34,7 +34,7 @@ jobs:
           --target base \
           -t "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-base" \
           .
-        docker save "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-base" | gzip > build-${{ matrix.version }}-git-${GIT_REV}.tar.gz
+        docker save "ghcr.io/${GITHUB_REPOSITORY_OWNER}/humhub:${GITHUB_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-base" | gzip > "build-${{ matrix.version }}-git-${GIT_REV}.tar.gz"
     - name: Upload image archive
       uses: actions/upload-artifact@v2
       with:
