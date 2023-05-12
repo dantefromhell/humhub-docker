@@ -117,7 +117,7 @@ jobs:
       - name: Show HumHub logs
         run: docker logs humhub-docker_humhub_1
       - name: Setup upterm SSH debugging
-        uses: lhotari/action-upterm@v1
+        uses: mxschmitt/action-tmate@v3
       - name: Test
         run: curl 'http://localhost:8080/' -L --fail -s | grep 'Powered by' -q || ( curl 'http://localhost:8080/' ; exit 1;)
       - name: Test Email
@@ -167,7 +167,7 @@ jobs:
       - name: Show HumHub logs
         run: docker logs humhub-docker_humhub_1
       - name: Setup upterm SSH debugging
-        uses: lhotari/action-upterm@v1
+        uses: mxschmitt/action-tmate@v3
       - name: Test
         run: curl 'http://localhost:8080/' -L --fail -s | grep 'Powered by' -q || ( curl 'http://localhost:8080/' ; exit 1;)
       - name: Test Email
