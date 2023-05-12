@@ -7,6 +7,12 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
+    inputs:
+      ssh_debug_enabled:
+        type: boolean
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        required: false
+        default: false
 
 jobs:
   build_bases:
@@ -118,6 +124,7 @@ jobs:
         run: docker logs humhub-docker_humhub_1
       - name: Setup upterm SSH debugging
         uses: mxschmitt/action-tmate@v3
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.ssh_debug_enabled }}
       - name: Test
         run: curl 'http://localhost:8080/' -L --fail -s | grep 'Powered by' -q || ( curl 'http://localhost:8080/' ; exit 1;)
       - name: Test Email
@@ -168,6 +175,7 @@ jobs:
         run: docker logs humhub-docker_humhub_1
       - name: Setup upterm SSH debugging
         uses: mxschmitt/action-tmate@v3
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.ssh_debug_enabled }}
       - name: Test
         run: curl 'http://localhost:8080/' -L --fail -s | grep 'Powered by' -q || ( curl 'http://localhost:8080/' ; exit 1;)
       - name: Test Email
