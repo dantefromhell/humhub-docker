@@ -91,8 +91,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: FranzDiebold/github-env-vars-action@v2.7.0
-      - name: Setup upterm SSH debugging
-        uses: lhotari/action-upterm@v1
       - name: Set Humhub version
         run: |
           HUMHUB_VERSION=$(awk -e '$0 ~ /^([0-9\.]+) ${{ matrix.version }}/ {print $1}' versions.txt)
@@ -118,6 +116,8 @@ jobs:
         run: docker ps -a
       - name: Show HumHub logs
         run: docker logs humhub-docker_humhub_1
+      - name: Setup upterm SSH debugging
+        uses: lhotari/action-upterm@v1
       - name: Test
         run: curl 'http://localhost:8080/' -L --fail -s | grep 'Powered by' -q || ( curl 'http://localhost:8080/' ; exit 1;)
       - name: Test Email
@@ -134,8 +134,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: FranzDiebold/github-env-vars-action@v2.7.0
-      - name: Setup upterm SSH debugging
-        uses: lhotari/action-upterm@v1
       - name: Set Humhub version
         run: |
           HUMHUB_VERSION=$(awk -e '$0 ~ /^([0-9\.]+) ${{ matrix.version }}/ {print $1}' versions.txt)
@@ -168,6 +166,8 @@ jobs:
         run: docker ps -a
       - name: Show HumHub logs
         run: docker logs humhub-docker_humhub_1
+      - name: Setup upterm SSH debugging
+        uses: lhotari/action-upterm@v1
       - name: Test
         run: curl 'http://localhost:8080/' -L --fail -s | grep 'Powered by' -q || ( curl 'http://localhost:8080/' ; exit 1;)
       - name: Test Email
