@@ -91,6 +91,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: FranzDiebold/github-env-vars-action@v2.7.0
+      - name: Setup upterm SSH debugging
+        uses: lhotari/action-upterm@v1
       - name: Set Humhub version
         run: |
           HUMHUB_VERSION=$(awk -e '$0 ~ /^([0-9\.]+) ${{ matrix.version }}/ {print $1}' versions.txt)
@@ -132,6 +134,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: FranzDiebold/github-env-vars-action@v2.7.0
+      - name: Setup upterm SSH debugging
+        uses: lhotari/action-upterm@v1
       - name: Set Humhub version
         run: |
           HUMHUB_VERSION=$(awk -e '$0 ~ /^([0-9\.]+) ${{ matrix.version }}/ {print $1}' versions.txt)
