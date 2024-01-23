@@ -43,20 +43,27 @@ class HumhubController extends Controller
     }
 
     /**
-     * Recursively merge arrays without overwriting existing values without notice.
+     * Recursively merge multidimensional arrays with duplicate key detection
+     * - Duplicate keys with identitical values will display a warning
+     * - Duplicate keys with conflicting values will display an error and abort
      *
      * @param array ...$arrays Arrays to be merged
      * @return array The merged array
      */
-    private function customMergeArrays(array ...$arrays): array
+    private function merge_arrays_detect_duplicates(array ...$arrays): array
     {
         $merged = [];
         foreach ($arrays as $array) {
             foreach ($array as $key => $value) {
                 if (is_array($value) && isset($merged[$key]) && is_array($merged[$key])) {
-                    $merged[$key] = $this->customMergeArrays($merged[$key], $value);
+                    $merged[$key] = $this->merge_arrays_detect_duplicates($merged[$key], $value);
                 } elseif (!isset($merged[$key])) {
                     $merged[$key] = $value;
+                } elseif ($merged[$key] == $value) {
+                    $this->stdout('WARNING Duplicate option "' . $key .' => ' . $value . '" detected, skipping.' . PHP_EOL);
+                } else {
+                    $this->stdout('ERROR Conflicting option "' . $key .' => ' . $value . '" detected, aborting.' . PHP_EOL);
+                    exit(1);
                 }
             }
         }
@@ -79,7 +86,7 @@ class HumhubController extends Controller
         // Load and merge each configuration file
         foreach ($fileList as $filename) {
             $includedData = require $filename;
-            $result = $this->customMergeArrays($result, $includedData);
+            $result = $this->merge_arrays_detect_duplicates($result, $includedData);
         }
 
         return $result;
