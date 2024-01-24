@@ -66,7 +66,7 @@ class HumhubController extends Controller
                     );
                 } else {
                     $this->stdout(
-                        'ERROR Conflicting option "' . $key .' => ' . $value . '" detected, aborting.' . PHP_EOL,
+                        'ERROR Conflicting option "' . $key . ' => ' . $value . '" detected, aborting.' . PHP_EOL,
                         Console::FG_RED
                     );
                     exit(1);
