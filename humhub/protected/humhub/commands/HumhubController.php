@@ -32,10 +32,10 @@ class HumhubController extends Controller
 
         // Load and merge configuration files from the common.d directory
         $result = $this->loadConfigFiles('@app/config/common.d');
-        
+
         // Save the merged configuration to the common.php file using standard file writing
-        $commonContent = '<?php return ' . var_export($result, $return=true) . ';' . PHP_EOL;
-        FileHelper::createDirectory(dirname(\Yii::getAlias($commonFilePath)), $mode=0777, true);
+        $commonContent = '<?php return ' . var_export($result, $return = true) . ';' . PHP_EOL;
+        FileHelper::createDirectory(dirname(\Yii::getAlias($commonFilePath)), $mode = 0777, true);
         file_put_contents(\Yii::getAlias($commonFilePath), $commonContent);
 
         // Display success message in the console
@@ -50,21 +50,25 @@ class HumhubController extends Controller
      * @param array ...$arrays Arrays to be merged
      * @return array The merged array
      */
-    private function merge_arrays_detect_duplicates(array ...$arrays): array
+    private function mergeArraysDetectDuplicates(array ...$arrays): array
     {
         $merged = [];
         foreach ($arrays as $array) {
             foreach ($array as $key => $value) {
                 if (is_array($value) && isset($merged[$key]) && is_array($merged[$key])) {
-                    $merged[$key] = $this->merge_arrays_detect_duplicates($merged[$key], $value);
+                    $merged[$key] = $this->mergeArraysDetectDuplicates($merged[$key], $value);
                 } elseif (!isset($merged[$key])) {
                     $merged[$key] = $value;
                 } elseif ($merged[$key] == $value) {
-                    $this->stdout('WARNING Duplicate option "' . $key .' => ' . $value . '" detected, skipping.' . PHP_EOL,
-                                  Console::FG_YELLOW);
+                    $this->stdout(
+                        'WARNING Duplicate option "' . $key . ' => ' . $value . '" detected, skipping.' . PHP_EOL,
+                        Console::FG_YELLOW
+                    );
                 } else {
-                    $this->stdout('ERROR Conflicting option "' . $key .' => ' . $value . '" detected, aborting.' . PHP_EOL,
-                                  Console::FG_RED);
+                    $this->stdout(
+                        'ERROR Conflicting option "' . $key .' => ' . $value . '" detected, aborting.' . PHP_EOL,
+                        Console::FG_RED
+                    );
                     exit(1);
                 }
             }
@@ -93,7 +97,7 @@ class HumhubController extends Controller
         // Load and merge each configuration file
         foreach ($fileList as $filename) {
             $includedData = require $filename;
-            $result = $this->merge_arrays_detect_duplicates($result, $includedData);
+            $result = $this->mergeArraysDetectDuplicates($result, $includedData);
         }
 
         return $result;
