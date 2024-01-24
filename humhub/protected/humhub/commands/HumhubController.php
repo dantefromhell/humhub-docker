@@ -81,6 +81,10 @@ class HumhubController extends Controller
     {
         // Find all PHP files in the specified directory
         $fileList = FileHelper::findFiles(\Yii::getAlias($directory), ['only' => ['*.php']]);
+
+        // Sort the files to make loading behaviour deterministic.
+        sort($fileList);
+
         $result = [];
 
         // Load and merge each configuration file
