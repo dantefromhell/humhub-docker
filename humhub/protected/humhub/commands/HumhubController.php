@@ -70,6 +70,7 @@ class HumhubController extends Controller
             }
         }
 
+        // TODO: Sort array by key names for deterministic diffing.
         return $merged;
     }
 
