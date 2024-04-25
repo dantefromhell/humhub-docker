@@ -43,7 +43,7 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v6
         env:
-          DEFAULT_BRANCH: master
+          DEFAULT_BRANCH:  ${{ github.event.pull_request.base.ref }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_PHP_PHPSTAN: false
           VALIDATE_PHP_PSALM: false
