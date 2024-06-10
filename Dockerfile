@@ -78,7 +78,6 @@ ARG PHP_VERSION
 RUN apk add --no-cache --update $BUILD_DEPS && \
     ln -s /usr/bin/php$PHP_VERSION /usr/bin/php && \
     ln -s /usr/sbin/php-fpm$PHP_VERSION /usr/sbin/php-fpm && \
-    ln -s /etc/php/conf.d/99-custom.ini /etc/php$PHP_VERSION/conf.d/ && \
     rm -rf /var/cache/apk/*
 
 COPY --from=builder-composer /usr/bin/composer /usr/bin/composer
@@ -124,6 +123,7 @@ RUN apk add --no-cache --update $RUNTIME_DEPS && \
     apk add --no-cache --virtual temp_pkgs gettext && \
     ln -s /usr/bin/php$PHP_VERSION /usr/bin/php && \
     ln -s /usr/sbin/php-fpm$PHP_VERSION /usr/sbin/php-fpm && \
+    ln -s /etc/php/conf.d/99-custom.ini /etc/php$PHP_VERSION/conf.d/ && \
     cp /usr/bin/envsubst /usr/local/bin/envsubst && \
     apk del temp_pkgs && \
     rm -rf /var/cache/apk/*
