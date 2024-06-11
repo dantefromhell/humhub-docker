@@ -12,8 +12,4 @@ defined_envs=$(printf "\${%s} " $(env | grep -E "^NGINX_.*" | cut -d= -f1))
 envsubst "$defined_envs" </etc/nginx/nginx.conf >/tmp/nginx.conf
 mv -f /tmp/nginx.conf /etc/nginx/nginx.conf
 
-# Substitute variables in PHP configuration
-envsubst </etc/php/conf.d/99-custom.ini >/tmp/99-custom.ini
-mv -f /tmp/99-custom.ini /etc/php/conf.d/99-custom.ini
-
 exit 0
