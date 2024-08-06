@@ -63,6 +63,21 @@ HUMHUB_REDIS_PASSWORD=${HUMHUB_REDIS_PASSWORD:-""}
 HUMHUB_DISABLE_MODULES=${HUMHUB_DISABLE_MODULES:-""}
 HUMHUB_ENABLE_MODULES=${HUMHUB_ENABLE_MODULES:-""}
 
+# Compare semantic versioning numbers
+# less-than-or-equal
+semver_lte() {
+    [  "$1" = "$(printf '%s\n' "$1" "$2" | sort -V | head -n1)" ]
+}
+
+# less-than
+semver_lt() {
+    if [ "$1" = "$2" ]; then
+      return 1
+    else
+      semver_lte "$1" "$2"
+    fi
+}
+
 wait_for_db() {
 	if [ "$WAIT_FOR_DB" = "false" ]; then
 		return 0
@@ -102,7 +117,15 @@ if [ -f "/var/www/localhost/htdocs/protected/config/dynamic.php" ]; then
 	if [ "$INSTALL_VERSION" != "$SOURCE_VERSION" ]; then
 		echo >&3 "$0: Updating from version $INSTALL_VERSION to $SOURCE_VERSION"
 		php yii migrate/up --includeModuleMigrations=1 --interactive=0
-		php yii search/rebuild --interactive=0
+
+                # Since HumHub v1.16 the search index is automatically rebuild when upgrading.
+		# For older versions this needs to be done manually.
+                # This is an adoption of https://github.com/mriedmann/humhub-docker/pull/358
+                if semver_lt "$INSTALL_VERSION" "v1.16.0"; then
+		  echo >&3 "$0: Update search index manually"
+		  php yii search/rebuild --interactive=0
+                fi
+
 		cp -v /usr/src/humhub/.version /var/www/localhost/htdocs/protected/config/.version
 	fi
 else
