@@ -132,7 +132,7 @@ jobs:
           | grep 'Message successfully sent!' -q
       - name: Collect HumHub server logs
         if: ${{ always() }}
-        run: docker logs humhub-docker_humhub_1
+        run: docker logs humhub-docker-humhub-1
 
   test_prod:
     needs: build_variants
@@ -187,7 +187,7 @@ jobs:
             | grep 'Message successfully sent!' -q
       - name: Collect HumHub server logs
         if: ${{ always() }}
-        run: docker logs humhub-docker_humhub_1
+        run: docker logs humhub-docker-humhub-1
 
   push_ghcr:
     needs: ["test_aio", "test_prod"]
