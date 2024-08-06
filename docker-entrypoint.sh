@@ -65,13 +65,13 @@ HUMHUB_ENABLE_MODULES=${HUMHUB_ENABLE_MODULES:-""}
 
 # Compare semantic versioning numbers
 # less-than-or-equal
-semver-lte() {
+semver_lte() {
     [  "$1" = "`echo -e "$1\n$2" | sort -V | head -n1`" ]
 }
 
 # less-than
-semver-lt() {
-    [ "$1" = "$2" ] && return 1 || verlte $1 $2
+semver_lt() {
+    [ "$1" = "$2" ] && return 1 || semver_lte $1 $2
 }
 
 wait_for_db() {
@@ -117,7 +117,7 @@ if [ -f "/var/www/localhost/htdocs/protected/config/dynamic.php" ]; then
                 # Since HumHub v1.16 the search index is automatically rebuild when upgrading.
 		# For older versions this needs to be done manually.
                 # This is an adoption of https://github.com/mriedmann/humhub-docker/pull/358
-                if [ semver-lt "$INSTALL_VERSION" "v1.16.0" ]; then
+                if [ semver_lt "$INSTALL_VERSION" "v1.16.0" ]; then
 		  echo >&3 "$0: Update search index manually"
 		  php yii search/rebuild --interactive=0
                 fi
