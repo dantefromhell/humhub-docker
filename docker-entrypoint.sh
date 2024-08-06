@@ -66,12 +66,16 @@ HUMHUB_ENABLE_MODULES=${HUMHUB_ENABLE_MODULES:-""}
 # Compare semantic versioning numbers
 # less-than-or-equal
 semver_lte() {
-    [  "$1" = "`echo -e "$1\n$2" | sort -V | head -n1`" ]
+    [  "$1" = "$(printf '%s\n' "$1" "$2" | sort -V | head -n1)" ]
 }
 
 # less-than
 semver_lt() {
-    [ "$1" = "$2" ] && return 1 || semver_lte $1 $2
+    if [ "$1" = "$2" ]; then
+      return 1
+    else
+      semver_lte "$1" "$2"
+    fi
 }
 
 wait_for_db() {
