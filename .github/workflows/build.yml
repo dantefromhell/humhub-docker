@@ -115,20 +115,20 @@ jobs:
       - name: replace image
         run: sed -i "s/docker.io\/mriedmann\/humhub:latest/ghcr.io\/${CI_REPOSITORY_OWNER}\/humhub:${CI_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-allinone/g" docker-compose.yml
       - name: Spin up services
-        run: docker-compose -f docker-compose.yml up -d
+        run: docker compose -f docker-compose.yml up -d
       - name: Wait 
         run: sleep 120
       - name: Check status
         run: docker ps -a
       - name: Collect startup logs from all containers
-        run: docker-compose -f docker-compose.prod.yml logs
+        run: docker compose -f docker-compose.prod.yml logs
       - name: Setup upterm SSH debugging
         uses: mxschmitt/action-tmate@v3
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.ssh_debug_enabled }}
       - name: Test
         run: curl 'http://localhost:8080/' --location --fail --silent | grep 'Sign in</button>' -q || ( curl 'http://localhost:8080/'  --trace - ; exit 1;)
       - name: Test Email
-        run: docker-compose exec -T humhub php /var/www/localhost/htdocs/protected/yii test/email 'test@example.com' --interactive=0 \
+        run: docker compose exec -T humhub php /var/www/localhost/htdocs/protected/yii test/email 'test@example.com' --interactive=0 \
           | grep 'Message successfully sent!' -q
       - name: Collect HumHub server logs
         if: ${{ always() }}
@@ -169,13 +169,13 @@ jobs:
           sed -i "s/docker.io\/mriedmann\/humhub:stable-nginx/ghcr.io\/${CI_REPOSITORY_OWNER}\/humhub:${CI_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-nginx/g" docker-compose.prod.yml
           sed -i "s/docker.io\/mriedmann\/humhub:stable-phponly/ghcr.io\/${CI_REPOSITORY_OWNER}\/humhub:${CI_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-phponly/g" docker-compose.prod.yml
       - name: Spin up services
-        run: docker-compose -f docker-compose.prod.yml up -d
+        run: docker compose -f docker-compose.prod.yml up -d
       - name: Wait 
         run: sleep 120
       - name: Check status
         run: docker ps -a
       - name: Collect startup logs from all containers
-        run: docker-compose -f docker-compose.prod.yml logs
+        run: docker compose -f docker-compose.prod.yml logs
       - name: Setup upterm SSH debugging
         uses: mxschmitt/action-tmate@v3
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.ssh_debug_enabled }}
@@ -183,7 +183,7 @@ jobs:
         run: curl 'http://localhost:8080/' --location --fail --silent | grep 'Sign in</button>' -q || ( curl 'http://localhost:8080/'  --trace - ; exit 1;)
       - name: Test Email
         run: |
-          docker-compose exec -T humhub php /var/www/localhost/htdocs/protected/yii test/email 'test@example.com' --interactive=0 \
+          docker compose exec -T humhub php /var/www/localhost/htdocs/protected/yii test/email 'test@example.com' --interactive=0 \
             | grep 'Message successfully sent!' -q
       - name: Collect HumHub server logs
         if: ${{ always() }}
