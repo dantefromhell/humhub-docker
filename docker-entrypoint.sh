@@ -121,9 +121,11 @@ if [ -f "/var/www/localhost/htdocs/protected/config/dynamic.php" ]; then
                 # Since HumHub v1.16 the search index is automatically rebuild when upgrading.
 		# For older versions this needs to be done manually.
                 # This is an adoption of https://github.com/mriedmann/humhub-docker/pull/358
-                if semver_lt "$INSTALL_VERSION" "v1.16.0"; then
-		  echo >&3 "$0: Update search index manually"
+                if semver_lt "$SOURCE_VERSION" "v1.16.0"; then
+		  echo >&3 "$0: Updating search index manually..."
 		  php yii search/rebuild --interactive=0
+                else
+		  echo >&3 "$0: Newer version is >= 1.16 which automatically updates search index."
                 fi
 
 		cp -v /usr/src/humhub/.version /var/www/localhost/htdocs/protected/config/.version
