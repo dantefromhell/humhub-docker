@@ -12,6 +12,17 @@ return [
         'request' => [
             'trustedHosts' => ['127.0.0.1/32']
         ],
+
+        'response' => [
+            'on beforeSend' => function () {
+
+                # Disable Google topics
+                Yii::$app->response->headers->add('permissions-policy', 'browsing-topics=()');
+
+                # Disable Google FloC (Federated Learning of Cohorts)
+                Yii::$app->response->headers->add('permissions-policy', 'interest-cohort=()');
+            }
+        ],
     ],
 
     /**
