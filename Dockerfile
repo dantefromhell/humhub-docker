@@ -128,10 +128,11 @@ RUN apk add --no-cache --update $RUNTIME_DEPS && \
     rm -rf /var/cache/apk/*
 
 ENV PHP_POST_MAX_SIZE=128M
-ENV PHP_UPLOAD_MAX_FILESIZE=100M
+ENV PHP_UPLOAD_MAX_FILESIZE=10M
 ENV PHP_MAX_EXECUTION_TIME=60
-ENV PHP_MEMORY_LIMIT=1G
+ENV PHP_MEMORY_LIMIT=256M
 ENV PHP_TIMEZONE=UTC
+ENV PHP_MAX_FILE_UPLOADS=10
 
 RUN touch /var/run/supervisor.sock && \
     chmod 777 /var/run/supervisor.sock
