@@ -146,6 +146,8 @@ RUN mkdir -p /usr/src/humhub/protected/config/ && \
     rm -f var/www/localhost/htdocs/protected/config/common.php /usr/src/humhub/protected/config/common.php && \
     echo "v${HUMHUB_VERSION}" >  /usr/src/humhub/.version
 
+RUN mkdir -p /var/www/localhost/htdocs/static/img/emoji-custom
+
 COPY base/ /
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
@@ -155,6 +157,7 @@ RUN chmod 600 /etc/crontabs/nginx && \
 VOLUME /var/www/localhost/htdocs/uploads
 VOLUME /var/www/localhost/htdocs/protected/config
 VOLUME /var/www/localhost/htdocs/protected/modules
+VOLUME  /var/www/localhost/htdocs/static/img/emoji-custom
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["supervisord", "-n", "-c", "/etc/supervisord.conf"]
