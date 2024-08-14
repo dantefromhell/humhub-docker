@@ -157,7 +157,7 @@ RUN chmod 600 /etc/crontabs/nginx && \
 VOLUME /var/www/localhost/htdocs/uploads
 VOLUME /var/www/localhost/htdocs/protected/config
 VOLUME /var/www/localhost/htdocs/protected/modules
-VOLUME  /var/www/localhost/htdocs/static/img/emoji-custom
+VOLUME /var/www/localhost/htdocs/static/img/emoji-custom
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["supervisord", "-n", "-c", "/etc/supervisord.conf"]
