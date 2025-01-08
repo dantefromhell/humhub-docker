@@ -6,7 +6,7 @@ on:
     types: check-update
   workflow_dispatch:
   schedule:
-  - cron: "0 0 * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   execute:
@@ -35,7 +35,7 @@ jobs:
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
-          source_branch: "${{ env.GIT_BRANCH }}"                                 
-          destination_branch: "master"                      
+          source_branch: "${{ env.GIT_BRANCH }}"
+          destination_branch: "master"
           pr_title: "Bump HumHub to ${{ env.NEW_VERSION }}"
           github_token: ${{ secrets.GITHUB_TOKEN }}
