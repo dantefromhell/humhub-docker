@@ -30,11 +30,11 @@ while IFS= read -r line; do
 done <<< "$local_versions"
 
 if [ $UPDATE_NEEDED = true ]; then
-    GIT_BRANCH="update-$NEW_VERSION"
-    export GIT_BRANCH
+    # GIT_BRANCH="update-$NEW_VERSION"
+    # export GIT_BRANCH
 
-    git branch "$GIT_BRANCH" || true
-    git checkout "$GIT_BRANCH"
+    # git branch "$GIT_BRANCH" || true
+    # git checkout "$GIT_BRANCH"
 
     git add versions.txt
     git commit -m "update from $CUR_VERSION to $NEW_VERSION"
