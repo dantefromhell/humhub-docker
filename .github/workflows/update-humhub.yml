@@ -30,6 +30,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
+          base: ${{ env.GIT_BRANCH }}
           token: ${{ secrets.GITHUB_TOKEN }}
           delete-branch: true
           title: "Bump HumHub to ${{ env.NEW_VERSION }}"
