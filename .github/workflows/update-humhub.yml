@@ -22,7 +22,7 @@ jobs:
         id: update
         run: |
           . ./update.sh
-          { echo "CUR_VERSION=$CUR_VERSION"; echo "NEW_VERSION=$NEW_VERSION"; echo "GIT_BRANCH=$GIT_BRANCH"; } >> "$GITHUB_ENV"
+          { echo "CUR_VERSION=$CUR_VERSION"; echo "NEW_VERSION=$NEW_VERSION"; } >> "$GITHUB_ENV"
       - name: Check git status and log
         run: |
           git status
@@ -30,7 +30,6 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
-          base: ${{ env.GIT_BRANCH }}
           token: ${{ secrets.GITHUB_TOKEN }}
           delete-branch: true
           title: "Bump HumHub to ${{ env.NEW_VERSION }}"
