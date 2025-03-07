@@ -21,6 +21,10 @@ on:
       - "Dockerfile"
       - "docker-entrypoint.sh"
       - "versions.txt"
+  workflow_run:
+    workflows: ["Auto Update HumHub"]
+    types:
+      - completed
   workflow_dispatch:
     inputs:
       ssh_debug_enabled:
