@@ -4,23 +4,23 @@ name: Build
 on:
   pull_request:
     paths:
-      - 'base/**'
-      - 'humhub/**'
-      - 'nginx/**'
-      - 'phponly/**'
-      - 'Dockerfile'
-      - 'docker-entrypoint.sh'
-      - 'versions.txt'
+      - "base/**"
+      - "humhub/**"
+      - "nginx/**"
+      - "phponly/**"
+      - "Dockerfile"
+      - "docker-entrypoint.sh"
+      - "versions.txt"
   push:
     branches: [master]
     paths:
-      - 'base/**'
-      - 'humhub/**'
-      - 'nginx/**'
-      - 'phponly/**'
-      - 'Dockerfile'
-      - 'docker-entrypoint.sh'
-      - 'versions.txt'
+      - "base/**"
+      - "humhub/**"
+      - "nginx/**"
+      - "phponly/**"
+      - "Dockerfile"
+      - "docker-entrypoint.sh"
+      - "versions.txt"
   workflow_dispatch:
     inputs:
       ssh_debug_enabled:
