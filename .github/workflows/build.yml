@@ -3,7 +3,7 @@ name: Build
 
 on:
   pull_request:
-    paths: &trigger_path_list
+    paths:
     - base/**
     - humhub/**
     - nginx/**
@@ -12,7 +12,15 @@ on:
     - docker-entrypoint.sh
     - versions.txt
   push:
-    paths: *trigger_path_list
+    branches: [master]
+    paths:
+    - base/**
+    - humhub/**
+    - nginx/**
+    - phponly/**
+    - Dockerfile
+    - docker-entrypoint.sh
+    - versions.txt
   workflow_dispatch:
     inputs:
       ssh_debug_enabled:
