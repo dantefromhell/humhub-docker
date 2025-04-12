@@ -136,6 +136,12 @@ Disallow: /
 User-agent: PanguBot
 Disallow: /
 
+# AI Assistant
+# https://darkvisitors.com/agents/perplexity-user
+
+User-agent: Perplexity-User
+Disallow: /
+
 # AI Search Crawler
 # https://darkvisitors.com/agents/perplexitybot
 
