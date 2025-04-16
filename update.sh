@@ -5,6 +5,7 @@ set -xeo pipefail
 UPDATE_NEEDED=false
 CUR_VERSION=""
 NEW_VERSION=""
+GIT_BRANCH=""
 
 upstream_versions=$(curl -s https://api.github.com/repos/humhub/humhub/releases | jq -r '.[] | select(.prerelease==false) | .name' | sort --version-sort)
 local_versions=$(cat versions.txt) # to avoid problems when writing doing loop
@@ -29,6 +30,12 @@ while IFS= read -r line; do
 done <<< "$local_versions"
 
 if [ $UPDATE_NEEDED = true ]; then
+    GIT_BRANCH="update-$NEW_VERSION"
+    export GIT_BRANCH
+
+    git branch "$GIT_BRANCH" || true
+    git checkout "$GIT_BRANCH"
+
     git add versions.txt
     git commit -m "update from $CUR_VERSION to $NEW_VERSION"
 fi

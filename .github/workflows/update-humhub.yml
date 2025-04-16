@@ -22,15 +22,20 @@ jobs:
         id: update
         run: |
           . ./update.sh
-          { echo "CUR_VERSION=$CUR_VERSION"; echo "NEW_VERSION=$NEW_VERSION"; } >> "$GITHUB_ENV"
+          { echo "CUR_VERSION=$CUR_VERSION"; echo "NEW_VERSION=$NEW_VERSION"; echo "GIT_BRANCH=$GIT_BRANCH"; } >> "$GITHUB_ENV"
       - name: Check git status and log
         run: |
           git status
           git log
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          delete-branch: true
-          title: "Bump HumHub to ${{ env.NEW_VERSION }}"
-          body: "See Release notes at https://github.com/humhub/humhub/releases/tag/v${{ env.NEW_VERSION }}"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: "${{ env.GIT_BRANCH }}"
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "${{ env.GIT_BRANCH }}"
+          destination_branch: "master"
+          pr_title: "Bump HumHub to ${{ env.NEW_VERSION }}"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
