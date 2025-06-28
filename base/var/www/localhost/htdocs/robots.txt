@@ -29,6 +29,12 @@ User-agent: Applebot-Extended
 Disallow: /
 
 # AI Data Scraper
+# https://darkvisitors.com/agents/awario
+
+User-agent: Awario
+Disallow: /
+
+# AI Data Scraper
 # https://darkvisitors.com/agents/bytespider
 
 User-agent: Bytespider
@@ -71,6 +77,24 @@ User-agent: cohere-training-data-crawler
 Disallow: /
 
 # AI Data Scraper
+# https://darkvisitors.com/agents/cotoyogi
+
+User-agent: Cotoyogi
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/datenbank-crawler
+
+User-agent: Datenbank Crawler
+Disallow: /
+
+# AI Assistant
+# https://darkvisitors.com/agents/devin
+
+User-agent: Devin
+Disallow: /
+
+# AI Data Scraper
 # https://darkvisitors.com/agents/diffbot
 
 User-agent: Diffbot
@@ -83,9 +107,21 @@ User-agent: DuckAssistBot
 Disallow: /
 
 # AI Data Scraper
+# https://darkvisitors.com/agents/echobot-bot
+
+User-agent: Echobot Bot
+Disallow: /
+
+# AI Data Scraper
 # https://darkvisitors.com/agents/facebookbot
 
 User-agent: FacebookBot
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/factset-spyderbot
+
+User-agent: Factset_spyderbot
 Disallow: /
 
 # AI Data Scraper
@@ -98,6 +134,12 @@ Disallow: /
 # https://darkvisitors.com/agents/gptbot
 
 User-agent: GPTBot
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/icc-crawler
+
+User-agent: ICC-Crawler
 Disallow: /
 
 # AI Data Scraper
@@ -116,6 +158,12 @@ Disallow: /
 # https://darkvisitors.com/agents/meta-externalfetcher
 
 User-agent: Meta-ExternalFetcher
+Disallow: /
+
+# AI Assistant
+# https://darkvisitors.com/agents/mistralai-user
+
+User-agent: MistralAI-User
 Disallow: /
 
 # AI Search Crawler
@@ -142,6 +190,12 @@ Disallow: /
 User-agent: Perplexity-User
 Disallow: /
 
+# AI Assistant
+# https://darkvisitors.com/agents/perplexityuser
+
+User-agent: Perplexity‑User
+Disallow: /
+
 # AI Search Crawler
 # https://darkvisitors.com/agents/perplexitybot
 
@@ -149,9 +203,33 @@ User-agent: PerplexityBot
 Disallow: /
 
 # AI Data Scraper
+# https://darkvisitors.com/agents/petalbot
+
+User-agent: PetalBot
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/qualifiedbot
+
+User-agent: QualifiedBot
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/semrushbot-ocob
+
+User-agent: SemrushBot-OCOB
+Disallow: /
+
+# AI Data Scraper
 # https://darkvisitors.com/agents/timpibot
 
 User-agent: Timpibot
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/wardbot
+
+User-agent: WARDBot
 Disallow: /
 
 # AI Data Scraper
