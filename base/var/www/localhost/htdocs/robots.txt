@@ -29,12 +29,6 @@ User-agent: Applebot-Extended
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/awario
-
-User-agent: Awario
-Disallow: /
-
-# AI Data Scraper
 # https://darkvisitors.com/agents/bytespider
 
 User-agent: Bytespider
@@ -50,6 +44,18 @@ Disallow: /
 # https://darkvisitors.com/agents/chatgpt-user
 
 User-agent: ChatGPT-User
+Disallow: /
+
+# AI Search Crawler
+# https://darkvisitors.com/agents/claude-searchbot
+
+User-agent: Claude-SearchBot
+Disallow: /
+
+# AI Assistant
+# https://darkvisitors.com/agents/claude-user
+
+User-agent: Claude-User
 Disallow: /
 
 # Undocumented AI Agent
@@ -107,12 +113,6 @@ User-agent: DuckAssistBot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/echobot-bot
-
-User-agent: Echobot Bot
-Disallow: /
-
-# AI Data Scraper
 # https://darkvisitors.com/agents/facebookbot
 
 User-agent: FacebookBot
@@ -122,6 +122,12 @@ Disallow: /
 # https://darkvisitors.com/agents/factset-spyderbot
 
 User-agent: Factset_spyderbot
+Disallow: /
+
+# AI Assistant
+# https://darkvisitors.com/agents/gemini-deep-research
+
+User-agent: Gemini-Deep-Research
 Disallow: /
 
 # AI Data Scraper
@@ -166,6 +172,12 @@ Disallow: /
 User-agent: MistralAI-User
 Disallow: /
 
+# AI Data Scraper
+# https://darkvisitors.com/agents/netestate-imprint-crawler
+
+User-agent: netEstate Imprint Crawler
+Disallow: /
+
 # AI Search Crawler
 # https://darkvisitors.com/agents/oai-searchbot
 
@@ -190,12 +202,6 @@ Disallow: /
 User-agent: Perplexity-User
 Disallow: /
 
-# AI Assistant
-# https://darkvisitors.com/agents/perplexityuser
-
-User-agent: Perplexity‑User
-Disallow: /
-
 # AI Search Crawler
 # https://darkvisitors.com/agents/perplexitybot
 
@@ -209,12 +215,6 @@ User-agent: PetalBot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/qualifiedbot
-
-User-agent: QualifiedBot
-Disallow: /
-
-# AI Data Scraper
 # https://darkvisitors.com/agents/semrushbot-ocob
 
 User-agent: SemrushBot-OCOB
@@ -224,12 +224,6 @@ Disallow: /
 # https://darkvisitors.com/agents/timpibot
 
 User-agent: Timpibot
-Disallow: /
-
-# AI Data Scraper
-# https://darkvisitors.com/agents/wardbot
-
-User-agent: WARDBot
 Disallow: /
 
 # AI Data Scraper
