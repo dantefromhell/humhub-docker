@@ -10,7 +10,7 @@ Disallow: /
 User-agent: AI2Bot
 Disallow: /
 
-# AI Data Scraper
+# AI Search Crawler
 # https://darkvisitors.com/agents/amazonbot
 
 User-agent: Amazonbot
