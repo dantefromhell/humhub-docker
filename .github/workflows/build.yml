@@ -41,7 +41,7 @@ jobs:
       - uses: FranzDiebold/github-env-vars-action@v2.8.0
       - name: Set Humhub version
         run: |
-          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9\.]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
+          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9a-z\.\-]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
           export HUMHUB_VERSION
           echo "HUMHUB_VERSION=$HUMHUB_VERSION" >> "$GITHUB_ENV"
           GIT_REV=$(git rev-parse --short HEAD)
@@ -76,7 +76,7 @@ jobs:
       - uses: FranzDiebold/github-env-vars-action@v2.8.0
       - name: Set Humhub version
         run: |
-          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9\.]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
+          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9a-z\.\-]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
           export HUMHUB_VERSION
           echo "HUMHUB_VERSION=$HUMHUB_VERSION" >> "$GITHUB_ENV"
           GIT_REV=$(git rev-parse --short HEAD)
@@ -114,7 +114,7 @@ jobs:
       - uses: FranzDiebold/github-env-vars-action@v2.8.0
       - name: Set Humhub version
         run: |
-          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9\.]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
+          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9a-z\.\-]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
           export HUMHUB_VERSION
           echo "HUMHUB_VERSION=$HUMHUB_VERSION" >> "$GITHUB_ENV"
           GIT_REV=$(git rev-parse --short HEAD)
@@ -162,7 +162,7 @@ jobs:
       - uses: FranzDiebold/github-env-vars-action@v2.8.0
       - name: Set Humhub version
         run: |
-          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9\.]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
+          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9a-z\.\-]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
           export HUMHUB_VERSION
           echo "HUMHUB_VERSION=$HUMHUB_VERSION" >> "$GITHUB_ENV"
           GIT_REV=$(git rev-parse --short HEAD)
@@ -221,7 +221,7 @@ jobs:
         run: echo "${{ secrets.PAT }}" | docker login ghcr.io --username "${GITHUB_REPOSITORY_OWNER}" --password-stdin
       - name: Set Humhub version
         run: |
-          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9\.]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
+          HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9a-z\.\-]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
           export HUMHUB_VERSION
           echo "HUMHUB_VERSION=$HUMHUB_VERSION" >> "$GITHUB_ENV"
           GIT_REV=$(git rev-parse --short HEAD)
