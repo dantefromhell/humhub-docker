@@ -53,11 +53,11 @@ jobs:
         uses: super-linter/super-linter@v8
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_PHP_PHPSTAN: false
-          VALIDATE_PHP_PSALM: false
+          DOCKERFILE_HADOLINT_FILE_NAME: .hadolint.yaml
+          LINTER_RULES_PATH: .
           VALIDATE_CHECKOV: false
-          VALIDATE_SHELL_SHFMT: false
           VALIDATE_DOCKERFILE: false
           VALIDATE_JSCPD: false
-          LINTER_RULES_PATH: .
-          DOCKERFILE_HADOLINT_FILE_NAME: .hadolint.yaml
+          VALIDATE_PHP_PHPSTAN: false
+          VALIDATE_PHP_PSALM: false
+          VALIDATE_SHELL_SHFMT: false
