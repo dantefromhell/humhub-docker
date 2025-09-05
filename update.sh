@@ -7,12 +7,21 @@ CUR_VERSION=""
 NEW_VERSION=""
 GIT_BRANCH=""
 
-upstream_versions=$(curl -s https://api.github.com/repos/humhub/humhub/releases | jq -r '.[] | select(.prerelease==true) | .name' | sort --version-sort)
+upstream_versions=$(curl -s https://api.github.com/repos/humhub/humhub/releases | jq -r '.[] | select(.prerelease==false) | .name' | sort --version-sort)
+upstream_versions_prerelease=$(curl -s https://api.github.com/repos/humhub/humhub/releases | jq -r '.[] | select(.prerelease==true) | .name' | sort --version-sort)
 local_versions=$(cat versions.txt) # to avoid problems when writing doing loop
 while IFS= read -r line; do
     local_version_prefix=$(echo "$line" | cut -d' ' -f2)
     local_version=$(echo "$line" | cut -d' ' -f1)
-    latest_upstream_version=$(echo "$upstream_versions" | grep "$local_version_prefix" | tail -n1)
+
+    # If the current local_version contains the word 'beta' we have to consult
+    # the list of prereleases.
+    if [[ $local_version =~ "beta" ]]; then
+      latest_upstream_version=$(echo "$upstream_versions_prerelease" | grep "$local_version_prefix" | tail -n1)
+    else
+      latest_upstream_version=$(echo "$upstream_versions" | grep "$local_version_prefix" | tail -n1)
+    fi
+
     if [ "$local_version" != "$latest_upstream_version" ]; then
         echo "$local_version_prefix: UPDATE NEEDED! ($local_version != $latest_upstream_version)"
         postfix=${line/$local_version $local_version_prefix/}
