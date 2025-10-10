@@ -134,8 +134,10 @@ jobs:
       - name: Wait
         run: sleep 120
       - name: Check status
+        if: ${{ always() }}
         run: docker ps -a
       - name: Collect startup logs from all containers
+        if: ${{ always() }}
         run: docker compose -f docker-compose.prod.yml logs
       - name: Setup upterm SSH debugging
         uses: mxschmitt/action-tmate@v3
@@ -189,8 +191,10 @@ jobs:
       - name: Wait
         run: sleep 120
       - name: Check status
+        if: ${{ always() }}
         run: docker ps -a
       - name: Collect startup logs from all containers
+        if: ${{ always() }}
         run: docker compose -f docker-compose.prod.yml logs
       - name: Setup upterm SSH debugging
         uses: mxschmitt/action-tmate@v3
