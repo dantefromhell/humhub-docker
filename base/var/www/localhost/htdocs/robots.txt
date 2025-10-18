@@ -148,6 +148,12 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
+# AI Assistant
+# https://darkvisitors.com/agents/google-notebooklm
+
+User-agent: Google-NotebookLM
+Disallow: /
+
 # AI Data Scraper
 # https://darkvisitors.com/agents/googleother
 
