@@ -7,7 +7,7 @@ Disallow: /
 # AI Data Scraper
 # https://darkvisitors.com/agents/ai2bot
 
-User-agent: AI2Bot
+User-agent: Ai2Bot
 Disallow: /
 
 # AI Search Crawler
@@ -190,6 +190,12 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
+# AI Search Crawler
+# https://darkvisitors.com/agents/meta-webindexer
+
+User-agent: meta-webindexer
+Disallow: /
+
 # AI Assistant
 # https://darkvisitors.com/agents/mistralai-user
 
@@ -253,7 +259,7 @@ Disallow: /
 # AI Data Scraper
 # https://darkvisitors.com/agents/webzio-extended
 
-User-agent: Webzio-Extended
+User-agent: webzio-extended
 Disallow: /
 
 # AI Search Crawler
