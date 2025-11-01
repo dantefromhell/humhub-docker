@@ -4,10 +4,16 @@
 User-agent: AddSearchBot
 Disallow: /
 
-# AI Data Scraper
-# https://darkvisitors.com/agents/ai2bot
+# AI Assistant
+# https://darkvisitors.com/agents/ai2bot-deepresearcheval
 
-User-agent: Ai2Bot
+User-agent: Ai2Bot-DeepResearchEval
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/ai2bot-dolma
+
+User-agent: Ai2Bot-Dolma
 Disallow: /
 
 # AI Search Crawler
@@ -50,6 +56,12 @@ Disallow: /
 # https://darkvisitors.com/agents/ccbot
 
 User-agent: CCBot
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/chatglm-spider
+
+User-agent: ChatGLM-Spider
 Disallow: /
 
 # AI Assistant
@@ -112,6 +124,12 @@ Disallow: /
 User-agent: Datenbank Crawler
 Disallow: /
 
+# Undocumented AI Agent
+# https://darkvisitors.com/agents/deepseekbot
+
+User-agent: DeepSeekBot
+Disallow: /
+
 # AI Assistant
 # https://darkvisitors.com/agents/devin
 
@@ -166,6 +184,18 @@ Disallow: /
 User-agent: GPTBot
 Disallow: /
 
+# Undocumented AI Agent
+# https://darkvisitors.com/agents/iaskbot
+
+User-agent: iAskBot
+Disallow: /
+
+# Undocumented AI Agent
+# https://darkvisitors.com/agents/iaskspider
+
+User-agent: iaskspider
+Disallow: /
+
 # AI Data Scraper
 # https://darkvisitors.com/agents/icc-crawler
 
@@ -178,6 +208,12 @@ Disallow: /
 User-agent: Kangaroo Bot
 Disallow: /
 
+# Undocumented AI Agent
+# https://darkvisitors.com/agents/kunatocrawler
+
+User-agent: KunatoCrawler
+Disallow: /
+
 # AI Assistant
 # https://darkvisitors.com/agents/linerbot
 
@@ -188,6 +224,12 @@ Disallow: /
 # https://darkvisitors.com/agents/meta-externalagent
 
 User-agent: meta-externalagent
+Disallow: /
+
+# AI Assistant
+# https://darkvisitors.com/agents/meta-externalfetcher
+
+User-agent: meta-externalfetcher
 Disallow: /
 
 # AI Search Crawler
@@ -257,13 +299,31 @@ User-agent: Timpibot
 Disallow: /
 
 # AI Data Scraper
+# https://darkvisitors.com/agents/velenpublicwebcrawler
+
+User-agent: VelenPublicWebCrawler
+Disallow: /
+
+# AI Data Scraper
 # https://darkvisitors.com/agents/webzio-extended
 
 User-agent: webzio-extended
+Disallow: /
+
+# Undocumented AI Agent
+# https://darkvisitors.com/agents/wrtnbot
+
+User-agent: WRTNBot
 Disallow: /
 
 # AI Search Crawler
 # https://darkvisitors.com/agents/youbot
 
 User-agent: YouBot
+Disallow: /
+
+# AI Search Crawler
+# https://darkvisitors.com/agents/zanistabot
+
+User-agent: ZanistaBot
 Disallow: /
