@@ -7,7 +7,7 @@ Disallow: /
 # AI Assistant
 # https://darkvisitors.com/agents/ai2bot-deepresearcheval
 
-User-agent: Ai2Bot-DeepResearchEval
+User-agent: AI2Bot-DeepResearchEval
 Disallow: /
 
 # AI Data Scraper
@@ -160,6 +160,12 @@ Disallow: /
 User-agent: Gemini-Deep-Research
 Disallow: /
 
+# AI Search Crawler
+# https://darkvisitors.com/agents/google-cloudvertexbot
+
+User-agent: Google-CloudVertexBot
+Disallow: /
+
 # AI Data Scraper
 # https://darkvisitors.com/agents/google-extended
 
@@ -203,6 +209,12 @@ User-agent: ICC-Crawler
 Disallow: /
 
 # AI Data Scraper
+# https://darkvisitors.com/agents/imagespider
+
+User-agent: imageSpider
+Disallow: /
+
+# AI Data Scraper
 # https://darkvisitors.com/agents/kangaroo-bot
 
 User-agent: Kangaroo Bot
@@ -214,10 +226,28 @@ Disallow: /
 User-agent: KunatoCrawler
 Disallow: /
 
+# AI Data Scraper
+# https://darkvisitors.com/agents/laion-huggingface-processor
+
+User-agent: laion-huggingface-processor
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/lcc
+
+User-agent: LCC
+Disallow: /
+
 # AI Assistant
 # https://darkvisitors.com/agents/linerbot
 
 User-agent: LinerBot
+Disallow: /
+
+# AI Search Crawler
+# https://darkvisitors.com/agents/linkupbot
+
+User-agent: LinkupBot
 Disallow: /
 
 # AI Data Scraper
@@ -287,9 +317,27 @@ User-agent: PetalBot
 Disallow: /
 
 # AI Assistant
+# https://darkvisitors.com/agents/poggio-citations
+
+User-agent: Poggio-Citations
+Disallow: /
+
+# AI Assistant
 # https://darkvisitors.com/agents/qualifiedbot
 
 User-agent: QualifiedBot
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/sbintuitionsbot
+
+User-agent: SBIntuitionsBot
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/spider
+
+User-agent: Spider
 Disallow: /
 
 # AI Data Scraper
