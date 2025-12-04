@@ -1,4 +1,4 @@
-ARG PHP_VERSION="82"
+ARG PHP_VERSION="84"
 
 ARG BUILD_DEPS="\
     ca-certificates \
