@@ -22,6 +22,12 @@ Disallow: /
 User-agent: Amazonbot
 Disallow: /
 
+# AI Search Crawler
+# https://darkvisitors.com/agents/anomura
+
+User-agent: Anomura
+Disallow: /
+
 # Undocumented AI Agent
 # https://darkvisitors.com/agents/anthropic-ai
 
@@ -40,10 +46,22 @@ Disallow: /
 User-agent: Applebot-Extended
 Disallow: /
 
+# AI Search Crawler
+# https://darkvisitors.com/agents/atlassian-bot
+
+User-agent: atlassian-bot
+Disallow: /
+
 # AI Assistant
 # https://darkvisitors.com/agents/bigsur-ai
 
 User-agent: bigsur.ai
+Disallow: /
+
+# AI Search Crawler
+# https://darkvisitors.com/agents/bravebot
+
+User-agent: Bravebot
 Disallow: /
 
 # AI Data Scraper
@@ -56,6 +74,12 @@ Disallow: /
 # https://darkvisitors.com/agents/ccbot
 
 User-agent: CCBot
+Disallow: /
+
+# AI Search Crawler
+# https://darkvisitors.com/agents/channel3bot
+
+User-agent: Channel3Bot
 Disallow: /
 
 # AI Data Scraper
@@ -94,6 +118,12 @@ Disallow: /
 User-agent: ClaudeBot
 Disallow: /
 
+# AI Search Crawler
+# https://darkvisitors.com/agents/cloudflare-autorag
+
+User-agent: Cloudflare-AutoRAG
+Disallow: /
+
 # AI Data Scraper
 # https://darkvisitors.com/agents/cloudvertexbot
 
@@ -116,6 +146,12 @@ Disallow: /
 # https://darkvisitors.com/agents/cotoyogi
 
 User-agent: Cotoyogi
+Disallow: /
+
+# Undocumented AI Agent
+# https://darkvisitors.com/agents/crawl4ai
+
+User-agent: Crawl4AI
 Disallow: /
 
 # AI Data Scraper
@@ -218,6 +254,12 @@ Disallow: /
 # https://darkvisitors.com/agents/kangaroo-bot
 
 User-agent: Kangaroo Bot
+Disallow: /
+
+# AI Assistant
+# https://darkvisitors.com/agents/klaviyoaibot
+
+User-agent: KlaviyoAIBot
 Disallow: /
 
 # Undocumented AI Agent
