@@ -57,6 +57,7 @@ ARG RUNTIME_DEPS="\
     php${PHP_VERSION}-phar \
     php${PHP_VERSION}-session \
     php${PHP_VERSION}-simplexml \
+    php${PHP_VERSION}-sodium \
     php${PHP_VERSION}-sqlite3 \
     php${PHP_VERSION}-xml \
     php${PHP_VERSION}-xmlreader \
