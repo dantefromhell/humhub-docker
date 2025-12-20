@@ -359,6 +359,12 @@ User-agent: PetalBot
 Disallow: /
 
 # AI Assistant
+# https://darkvisitors.com/agents/phindbot
+
+User-agent: PhindBot
+Disallow: /
+
+# AI Assistant
 # https://darkvisitors.com/agents/poggio-citations
 
 User-agent: Poggio-Citations
@@ -380,6 +386,12 @@ Disallow: /
 # https://darkvisitors.com/agents/spider
 
 User-agent: Spider
+Disallow: /
+
+# AI Assistant
+# https://darkvisitors.com/agents/tavilybot
+
+User-agent: TavilyBot
 Disallow: /
 
 # AI Data Scraper
