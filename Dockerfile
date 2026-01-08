@@ -20,6 +20,7 @@ ARG BUILD_DEPS="\
     php${PHP_VERSION}-pdo_mysql \
     php${PHP_VERSION}-phar \
     php${PHP_VERSION}-simplexml \
+    php${PHP_VERSION}-sodium \
     php${PHP_VERSION}-tokenizer \
     php${PHP_VERSION}-xml \
     php${PHP_VERSION}-xmlreader \
