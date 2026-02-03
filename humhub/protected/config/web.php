@@ -30,7 +30,7 @@ return [
      * of issues since they require updated module code.
      *
      * For an easier migration they are now disabled and will be re-enabled when things have
-     * stabalized.
+     * stabilized.
      *
      * TODO: Remove this section/commit when GitHub complains about CSP have slowed down.
      */
