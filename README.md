@@ -58,7 +58,7 @@ If plan to build some kind of hosted solution, have a look at `docker-compose.pr
 
 No database integrated. For persistency look at the Compose-File example.
 
-1. `docker run -d --name humhub_db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=humhub mariadb:10.2`
+1. `docker run -d --name humhub_db -e MARIADB_ROOT_PASSWORD=root -e MARIADB_DATABASE=humhub mariadb:12.1`
 2. `docker run -d --name humhub -p 80:80 --link humhub_db:db mriedmann/humhub:stable`
 3. open <http://localhost/> in browser
 4. complete the installation wizard (use `db` as database hostname and `humhub` as database name)
@@ -84,12 +84,12 @@ services:
       HUMHUB_DB_PASSWORD: humhub
 
   db:
-    image: mariadb:10.2
+    image: mariadb:12.1
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: humhub
-      MYSQL_USER: humhub
-      MYSQL_PASSWORD: humhub
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: humhub
+      MARIADB_USER: humhub
+      MARIADB_PASSWORD: humhub
 
 volumes:
   config: {}
