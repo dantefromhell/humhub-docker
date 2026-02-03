@@ -50,14 +50,14 @@ services:
   db:
     image: mariadb:10.4
     environment:
-      MYSQL_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
-      MYSQL_DATABASE: "humhub"
-      MYSQL_USER: ${HUMHUB_DB_USER}
-      MYSQL_PASSWORD: ${HUMHUB_DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+      MARIADB_DATABASE: "humhub"
+      MARIADB_USER: ${HUMHUB_DB_USER}
+      MARIADB_PASSWORD: ${HUMHUB_DB_PASSWORD}
     volumes:
-      - "mysql:/var/lib/mysql"
+      - "mariadb:/var/lib/mysql"
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "--silent"]
+      test: ["CMD", "mariadb-admin", "ping", "--silent"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -82,4 +82,4 @@ services:
 
 volumes:
   config: {}
-  mysql: {}
+  mariadb: {}
