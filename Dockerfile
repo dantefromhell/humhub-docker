@@ -69,9 +69,9 @@ ARG RUNTIME_DEPS="\
     tzdata \
     "
 
-FROM composer:2.9.4 as builder-composer
+FROM composer:2.9.4 AS builder-composer
 
-FROM docker.io/library/alpine:3.23.2 as builder
+FROM docker.io/library/alpine:3.23.2 AS builder
 
 ARG HUMHUB_VERSION
 ARG BUILD_DEPS
@@ -101,7 +101,7 @@ RUN composer config --no-plugins allow-plugins.yiisoft/yii2-composer true && \
     grunt build-assets && \
     rm -rf ./node_modules
 
-FROM docker.io/library/alpine:3.23.2 as base
+FROM docker.io/library/alpine:3.23.2 AS base
 
 ARG HUMHUB_VERSION
 ARG RUNTIME_DEPS
@@ -162,7 +162,7 @@ VOLUME /var/www/localhost/htdocs/static/img/emoji-custom
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["supervisord", "-n", "-c", "/etc/supervisord.conf"]
 
-FROM base as humhub_phponly
+FROM base AS humhub_phponly
 
 LABEL variant="phponly"
 
@@ -177,7 +177,7 @@ RUN chmod +x /usr/local/bin/php-fpm-healthcheck \
 
 EXPOSE 9000
 
-FROM docker.io/library/nginx:1.29.4-alpine as humhub_nginx
+FROM docker.io/library/nginx:1.29.4-alpine AS humhub_nginx
 
 LABEL variant="nginx"
 
@@ -188,7 +188,7 @@ ENV NGINX_CLIENT_MAX_BODY_SIZE=128m \
 COPY nginx/ /
 COPY --from=builder --chown=nginx:nginx /usr/src/humhub/ /var/www/localhost/htdocs/
 
-FROM base as humhub_allinone
+FROM base AS humhub_allinone
 
 LABEL variant="allinone"
 
