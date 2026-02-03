@@ -2,7 +2,7 @@
 
 /**
  * HumhubController implements a 'yii' console command to generate the 'common.php'
- * configuration file by deep merging arrays read from multipe files in the
+ * configuration file by deep merging arrays read from multiple files in the
  * 'common.d/' directory.
  *
  * To use this command, run the following command:
