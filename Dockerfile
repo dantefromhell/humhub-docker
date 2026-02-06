@@ -177,7 +177,7 @@ RUN chmod +x /usr/local/bin/php-fpm-healthcheck \
 
 EXPOSE 9000
 
-FROM docker.io/library/nginx:1.29.4-alpine AS humhub_nginx
+FROM docker.io/library/nginx:1.29.5-alpine AS humhub_nginx
 
 LABEL variant="nginx"
 
