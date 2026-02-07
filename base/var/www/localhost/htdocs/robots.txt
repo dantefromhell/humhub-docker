@@ -1,431 +1,431 @@
 # AI Search Crawler
-# https://darkvisitors.com/agents/addsearchbot
+# https://knownagents.com/agents/addsearchbot
 
 User-agent: AddSearchBot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/ai2bot-deepresearcheval
+# https://knownagents.com/agents/ai2bot-deepresearcheval
 
 User-agent: AI2Bot-DeepResearchEval
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/ai2bot-dolma
+# https://knownagents.com/agents/ai2bot-dolma
 
 User-agent: Ai2Bot-Dolma
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/amazonbot
+# https://knownagents.com/agents/amazonbot
 
 User-agent: Amazonbot
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/anomura
+# https://knownagents.com/agents/anomura
 
 User-agent: Anomura
 Disallow: /
 
 # Undocumented AI Agent
-# https://darkvisitors.com/agents/anthropic-ai
+# https://knownagents.com/agents/anthropic-ai
 
 User-agent: anthropic-ai
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/applebot
+# https://knownagents.com/agents/applebot
 
 User-agent: Applebot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/applebot-extended
+# https://knownagents.com/agents/applebot-extended
 
 User-agent: Applebot-Extended
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/atlassian-bot
+# https://knownagents.com/agents/atlassian-bot
 
 User-agent: atlassian-bot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/bigsur-ai
+# https://knownagents.com/agents/bigsur-ai
 
 User-agent: bigsur.ai
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/bravebot
+# https://knownagents.com/agents/bravebot
 
 User-agent: Bravebot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/bytespider
+# https://knownagents.com/agents/bytespider
 
 User-agent: Bytespider
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/ccbot
+# https://knownagents.com/agents/ccbot
 
 User-agent: CCBot
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/channel3bot
+# https://knownagents.com/agents/channel3bot
 
 User-agent: Channel3Bot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/chatglm-spider
+# https://knownagents.com/agents/chatglm-spider
 
 User-agent: ChatGLM-Spider
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/chatgpt-user
+# https://knownagents.com/agents/chatgpt-user
 
 User-agent: ChatGPT-User
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/claude-searchbot
+# https://knownagents.com/agents/claude-searchbot
 
 User-agent: Claude-SearchBot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/claude-user
+# https://knownagents.com/agents/claude-user
 
 User-agent: Claude-User
 Disallow: /
 
 # Undocumented AI Agent
-# https://darkvisitors.com/agents/claude-web
+# https://knownagents.com/agents/claude-web
 
 User-agent: Claude-Web
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/claudebot
+# https://knownagents.com/agents/claudebot
 
 User-agent: ClaudeBot
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/cloudflare-autorag
+# https://knownagents.com/agents/cloudflare-autorag
 
 User-agent: Cloudflare-AutoRAG
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/cloudvertexbot
+# https://knownagents.com/agents/cloudvertexbot
 
 User-agent: CloudVertexBot
 Disallow: /
 
 # Undocumented AI Agent
-# https://darkvisitors.com/agents/cohere-ai
+# https://knownagents.com/agents/cohere-ai
 
 User-agent: cohere-ai
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/cohere-training-data-crawler
+# https://knownagents.com/agents/cohere-training-data-crawler
 
 User-agent: cohere-training-data-crawler
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/cotoyogi
+# https://knownagents.com/agents/cotoyogi
 
 User-agent: Cotoyogi
 Disallow: /
 
 # Undocumented AI Agent
-# https://darkvisitors.com/agents/crawl4ai
+# https://knownagents.com/agents/crawl4ai
 
 User-agent: Crawl4AI
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/datenbank-crawler
+# https://knownagents.com/agents/datenbank-crawler
 
 User-agent: Datenbank Crawler
 Disallow: /
 
 # Undocumented AI Agent
-# https://darkvisitors.com/agents/deepseekbot
+# https://knownagents.com/agents/deepseekbot
 
 User-agent: DeepSeekBot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/devin
+# https://knownagents.com/agents/devin
 
 User-agent: Devin
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/diffbot
+# https://knownagents.com/agents/diffbot
 
 User-agent: Diffbot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/duckassistbot
+# https://knownagents.com/agents/duckassistbot
 
 User-agent: DuckAssistBot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/facebookbot
+# https://knownagents.com/agents/facebookbot
 
 User-agent: FacebookBot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/gemini-deep-research
+# https://knownagents.com/agents/gemini-deep-research
 
 User-agent: Gemini-Deep-Research
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/google-cloudvertexbot
+# https://knownagents.com/agents/google-cloudvertexbot
 
 User-agent: Google-CloudVertexBot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/google-extended
+# https://knownagents.com/agents/google-extended
 
 User-agent: Google-Extended
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/google-notebooklm
+# https://knownagents.com/agents/google-notebooklm
 
 User-agent: Google-NotebookLM
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/googleother
+# https://knownagents.com/agents/googleother
 
 User-agent: GoogleOther
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/gptbot
+# https://knownagents.com/agents/gptbot
 
 User-agent: GPTBot
 Disallow: /
 
 # Undocumented AI Agent
-# https://darkvisitors.com/agents/iaskbot
+# https://knownagents.com/agents/iaskbot
 
 User-agent: iAskBot
 Disallow: /
 
 # Undocumented AI Agent
-# https://darkvisitors.com/agents/iaskspider
+# https://knownagents.com/agents/iaskspider
 
 User-agent: iaskspider
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/icc-crawler
+# https://knownagents.com/agents/icc-crawler
 
 User-agent: ICC-Crawler
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/imagespider
+# https://knownagents.com/agents/imagespider
 
 User-agent: imageSpider
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/kangaroo-bot
+# https://knownagents.com/agents/kangaroo-bot
 
 User-agent: Kangaroo Bot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/klaviyoaibot
+# https://knownagents.com/agents/klaviyoaibot
 
 User-agent: KlaviyoAIBot
 Disallow: /
 
 # Undocumented AI Agent
-# https://darkvisitors.com/agents/kunatocrawler
+# https://knownagents.com/agents/kunatocrawler
 
 User-agent: KunatoCrawler
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/laion-huggingface-processor
+# https://knownagents.com/agents/laion-huggingface-processor
 
 User-agent: laion-huggingface-processor
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/lcc
+# https://knownagents.com/agents/lcc
 
 User-agent: LCC
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/linerbot
+# https://knownagents.com/agents/linerbot
 
 User-agent: LinerBot
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/linkupbot
+# https://knownagents.com/agents/linkupbot
 
 User-agent: LinkupBot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/meta-externalagent
+# https://knownagents.com/agents/meta-externalagent
 
 User-agent: meta-externalagent
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/meta-externalfetcher
+# https://knownagents.com/agents/meta-externalfetcher
 
 User-agent: meta-externalfetcher
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/meta-webindexer
+# https://knownagents.com/agents/meta-webindexer
 
 User-agent: meta-webindexer
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/mistralai-user
+# https://knownagents.com/agents/mistralai-user
 
 User-agent: MistralAI-User
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/netestate-imprint-crawler
+# https://knownagents.com/agents/netestate-imprint-crawler
 
 User-agent: netEstate Imprint Crawler
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/oai-searchbot
+# https://knownagents.com/agents/oai-searchbot
 
 User-agent: OAI-SearchBot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/omgili
+# https://knownagents.com/agents/omgili
 
 User-agent: omgili
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/pangubot
+# https://knownagents.com/agents/pangubot
 
 User-agent: PanguBot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/perplexity-user
+# https://knownagents.com/agents/perplexity-user
 
 User-agent: Perplexity-User
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/perplexitybot
+# https://knownagents.com/agents/perplexitybot
 
 User-agent: PerplexityBot
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/petalbot
+# https://knownagents.com/agents/petalbot
 
 User-agent: PetalBot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/phindbot
+# https://knownagents.com/agents/phindbot
 
 User-agent: PhindBot
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/poggio-citations
+# https://knownagents.com/agents/poggio-citations
 
 User-agent: Poggio-Citations
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/qualifiedbot
+# https://knownagents.com/agents/qualifiedbot
 
 User-agent: QualifiedBot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/sbintuitionsbot
+# https://knownagents.com/agents/sbintuitionsbot
 
 User-agent: SBIntuitionsBot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/spider
+# https://knownagents.com/agents/spider
 
 User-agent: Spider
 Disallow: /
 
 # AI Assistant
-# https://darkvisitors.com/agents/tavilybot
+# https://knownagents.com/agents/tavilybot
 
 User-agent: TavilyBot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/timpibot
+# https://knownagents.com/agents/timpibot
 
 User-agent: Timpibot
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/velenpublicwebcrawler
+# https://knownagents.com/agents/velenpublicwebcrawler
 
 User-agent: VelenPublicWebCrawler
 Disallow: /
 
 # AI Data Scraper
-# https://darkvisitors.com/agents/webzio-extended
+# https://knownagents.com/agents/webzio-extended
 
 User-agent: webzio-extended
 Disallow: /
 
 # Undocumented AI Agent
-# https://darkvisitors.com/agents/wrtnbot
+# https://knownagents.com/agents/wrtnbot
 
 User-agent: WRTNBot
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/youbot
+# https://knownagents.com/agents/youbot
 
 User-agent: YouBot
 Disallow: /
 
 # AI Search Crawler
-# https://darkvisitors.com/agents/zanistabot
+# https://knownagents.com/agents/zanistabot
 
 User-agent: ZanistaBot
 Disallow: /
