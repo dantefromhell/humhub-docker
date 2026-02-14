@@ -16,10 +16,22 @@ Disallow: /
 User-agent: Ai2Bot-Dolma
 Disallow: /
 
-# AI Search Crawler
+# AI Data Scraper
 # https://knownagents.com/agents/amazonbot
 
 User-agent: Amazonbot
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/amzn-searchbot
+
+User-agent: Amzn-SearchBot
+Disallow: /
+
+# AI Assistant
+# https://knownagents.com/agents/amzn-user
+
+User-agent: Amzn-User
 Disallow: /
 
 # AI Search Crawler
@@ -50,6 +62,12 @@ Disallow: /
 # https://knownagents.com/agents/atlassian-bot
 
 User-agent: atlassian-bot
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/azureai-searchbot
+
+User-agent: AzureAI-SearchBot
 Disallow: /
 
 # AI Assistant
@@ -250,6 +268,12 @@ Disallow: /
 User-agent: imageSpider
 Disallow: /
 
+# AI Assistant
+# https://knownagents.com/agents/kagi-fetcher
+
+User-agent: kagi-fetcher
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/kangaroo-bot
 
@@ -392,6 +416,12 @@ Disallow: /
 # https://knownagents.com/agents/tavilybot
 
 User-agent: TavilyBot
+Disallow: /
+
+# Undocumented AI Agent
+# https://knownagents.com/agents/terracotta
+
+User-agent: TerraCotta
 Disallow: /
 
 # AI Data Scraper
