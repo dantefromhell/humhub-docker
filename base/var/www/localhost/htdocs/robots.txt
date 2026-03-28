@@ -70,6 +70,12 @@ Disallow: /
 User-agent: Applebot-Extended
 Disallow: /
 
+# Undocumented AI Agent
+# https://knownagents.com/agents/aranet-searchbot
+
+User-agent: Aranet-SearchBot
+Disallow: /
+
 # AI Search Crawler
 # https://knownagents.com/agents/atlassian-bot
 
