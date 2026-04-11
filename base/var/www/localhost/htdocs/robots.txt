@@ -46,18 +46,6 @@ Disallow: /
 User-agent: anthropic-ai
 Disallow: /
 
-# Undocumented AI Agent
-# https://knownagents.com/agents/apifybot
-
-User-agent: ApifyBot
-Disallow: /
-
-# AI Data Scraper
-# https://knownagents.com/agents/apifywebsitecontentcrawler
-
-User-agent: ApifyWebsiteContentCrawler
-Disallow: /
-
 # AI Search Crawler
 # https://knownagents.com/agents/applebot
 
@@ -92,12 +80,6 @@ Disallow: /
 # https://knownagents.com/agents/bigsur-ai
 
 User-agent: bigsur.ai
-Disallow: /
-
-# AI Search Crawler
-# https://knownagents.com/agents/bravebot
-
-User-agent: Bravebot
 Disallow: /
 
 # AI Data Scraper
@@ -203,39 +185,15 @@ User-agent: DeepSeekBot
 Disallow: /
 
 # AI Assistant
-# https://knownagents.com/agents/devin
-
-User-agent: Devin
-Disallow: /
-
-# AI Data Scraper
-# https://knownagents.com/agents/diffbot
-
-User-agent: Diffbot
-Disallow: /
-
-# AI Assistant
 # https://knownagents.com/agents/duckassistbot
 
 User-agent: DuckAssistBot
-Disallow: /
-
-# AI Search Crawler
-# https://knownagents.com/agents/exabot
-
-User-agent: ExaBot
 Disallow: /
 
 # AI Data Scraper
 # https://knownagents.com/agents/facebookbot
 
 User-agent: FacebookBot
-Disallow: /
-
-# AI Data Scraper
-# https://knownagents.com/agents/firecrawlagent
-
-User-agent: FirecrawlAgent
 Disallow: /
 
 # AI Assistant
@@ -443,12 +401,6 @@ User-agent: Spider
 Disallow: /
 
 # Undocumented AI Agent
-# https://knownagents.com/agents/tavilybot
-
-User-agent: TavilyBot
-Disallow: /
-
-# Undocumented AI Agent
 # https://knownagents.com/agents/terracotta
 
 User-agent: TerraCotta
@@ -476,12 +428,6 @@ Disallow: /
 # https://knownagents.com/agents/wrtnbot
 
 User-agent: WRTNBot
-Disallow: /
-
-# AI Search Crawler
-# https://knownagents.com/agents/youbot
-
-User-agent: YouBot
 Disallow: /
 
 # AI Search Crawler
