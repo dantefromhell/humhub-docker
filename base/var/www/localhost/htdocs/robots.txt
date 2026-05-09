@@ -400,12 +400,6 @@ Disallow: /
 User-agent: Spider
 Disallow: /
 
-# Undocumented AI Agent
-# https://knownagents.com/agents/terracotta
-
-User-agent: TerraCotta
-Disallow: /
-
 # AI Data Scraper
 # https://knownagents.com/agents/timpibot
 
