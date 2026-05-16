@@ -429,3 +429,9 @@ Disallow: /
 
 User-agent: ZanistaBot
 Disallow: /
+
+# Undocumented AI Agent
+# https://knownagents.com/agents/zenphonybot
+
+User-agent: ZenphonyBot
+Disallow: /
