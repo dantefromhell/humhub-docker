@@ -394,6 +394,12 @@ Disallow: /
 User-agent: SBIntuitionsBot
 Disallow: /
 
+# AI Assistant
+# https://knownagents.com/agents/shap-user
+
+User-agent: Shap-User
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/spider
 
