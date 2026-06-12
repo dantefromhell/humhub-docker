@@ -71,14 +71,14 @@ ARG RUNTIME_DEPS="\
 
 FROM composer:2.10.1 AS builder-composer
 
-FROM docker.io/library/alpine:3.23.4 AS builder
+FROM docker.io/library/alpine:3.24.0 AS builder
 
 ARG HUMHUB_VERSION
 ARG BUILD_DEPS
 ARG PHP_VERSION
 
 RUN apk add --no-cache --update $BUILD_DEPS && \
-    ln -s /usr/sbin/php-fpm$PHP_VERSION /usr/sbin/php-fpm && \
+    ln -s /usr/bin/php$PHP_VERSION /usr/bin/php && \
     rm -rf /var/cache/apk/*
 
 COPY --from=builder-composer /usr/bin/composer /usr/bin/composer
@@ -101,7 +101,7 @@ RUN composer config --no-plugins allow-plugins.yiisoft/yii2-composer true && \
     grunt build-assets && \
     rm -rf ./node_modules
 
-FROM docker.io/library/alpine:3.23.4 AS base
+FROM docker.io/library/alpine:3.24.0 AS base
 
 ARG HUMHUB_VERSION
 ARG RUNTIME_DEPS
@@ -122,6 +122,7 @@ LABEL name="HumHub" version="${HUMHUB_VERSION}-git-${VCS_REF}" variant="base" \
 
 RUN apk add --no-cache --update $RUNTIME_DEPS && \
     apk add --no-cache --virtual temp_pkgs gettext && \
+    ln -s /usr/bin/php$PHP_VERSION /usr/bin/php && \
     ln -s /usr/sbin/php-fpm$PHP_VERSION /usr/sbin/php-fpm && \
     cp /usr/bin/envsubst /usr/local/bin/envsubst && \
     apk del temp_pkgs && \
