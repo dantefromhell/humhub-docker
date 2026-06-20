@@ -4,6 +4,12 @@
 User-agent: AddSearchBot
 Disallow: /
 
+# AI Data Scraper
+# https://knownagents.com/agents/ai2bot
+
+User-agent: AI2Bot
+Disallow: /
+
 # AI Assistant
 # https://knownagents.com/agents/ai2bot-deepresearcheval
 
@@ -161,6 +167,12 @@ User-agent: cohere-training-data-crawler
 Disallow: /
 
 # AI Data Scraper
+# https://knownagents.com/agents/coherebot
+
+User-agent: CohereBot
+Disallow: /
+
+# AI Data Scraper
 # https://knownagents.com/agents/cotoyogi
 
 User-agent: Cotoyogi
@@ -197,6 +209,12 @@ User-agent: FacebookBot
 Disallow: /
 
 # AI Assistant
+# https://knownagents.com/agents/geisthaus-pagefetcher
+
+User-agent: GeistHaus-PageFetcher
+Disallow: /
+
+# AI Assistant
 # https://knownagents.com/agents/gemini-deep-research
 
 User-agent: Gemini-Deep-Research
@@ -218,6 +236,12 @@ Disallow: /
 # https://knownagents.com/agents/google-notebooklm
 
 User-agent: Google-NotebookLM
+Disallow: /
+
+# AI Assistant
+# https://knownagents.com/agents/googleagent-urlcontext
+
+User-agent: GoogleAgent-URLContext
 Disallow: /
 
 # AI Data Scraper
@@ -266,6 +290,24 @@ Disallow: /
 # https://knownagents.com/agents/kangaroo-bot
 
 User-agent: Kangaroo Bot
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/kimi-searchbot
+
+User-agent: Kimi-SearchBot
+Disallow: /
+
+# AI Assistant
+# https://knownagents.com/agents/kimi-user
+
+User-agent: Kimi-User
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/kimibot
+
+User-agent: KimiBot
 Disallow: /
 
 # AI Assistant
@@ -322,10 +364,22 @@ Disallow: /
 User-agent: meta-webindexer
 Disallow: /
 
+# AI Search Crawler
+# https://knownagents.com/agents/mistralai-index
+
+User-agent: MistralAI-Index
+Disallow: /
+
 # AI Assistant
 # https://knownagents.com/agents/mistralai-user
 
 User-agent: MistralAI-User
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/mistralbot
+
+User-agent: MistralBot
 Disallow: /
 
 # AI Data Scraper
@@ -412,6 +466,12 @@ Disallow: /
 User-agent: Timpibot
 Disallow: /
 
+# AI Assistant
+# https://knownagents.com/agents/useai
+
+User-agent: UseAI
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/velenpublicwebcrawler
 
@@ -428,6 +488,12 @@ Disallow: /
 # https://knownagents.com/agents/wrtnbot
 
 User-agent: WRTNBot
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/xai-searchbot
+
+User-agent: xAI-SearchBot
 Disallow: /
 
 # AI Search Crawler
