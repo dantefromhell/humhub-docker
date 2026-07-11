@@ -22,6 +22,18 @@ Disallow: /
 User-agent: Ai2Bot-Dolma
 Disallow: /
 
+# AI Search Crawler
+# https://knownagents.com/agents/amazon-kendra
+
+User-agent: amazon-kendra
+Disallow: /
+
+# AI Assistant
+# https://knownagents.com/agents/amazon-qbusiness
+
+User-agent: amazon-QBusiness
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/amazonbot
 
@@ -80,6 +92,12 @@ Disallow: /
 # https://knownagents.com/agents/azureai-searchbot
 
 User-agent: AzureAI-SearchBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/bedrockbot
+
+User-agent: bedrockbot
 Disallow: /
 
 # AI Assistant
@@ -190,16 +208,28 @@ Disallow: /
 User-agent: Datenbank Crawler
 Disallow: /
 
-# Undocumented AI Agent
+# AI Data Scraper
 # https://knownagents.com/agents/deepseekbot
 
 User-agent: DeepSeekBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/doubaobot
+
+User-agent: Doubaobot
 Disallow: /
 
 # AI Assistant
 # https://knownagents.com/agents/duckassistbot
 
 User-agent: DuckAssistBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/erniebot
+
+User-agent: ERNIEBot
 Disallow: /
 
 # AI Data Scraper
@@ -310,6 +340,12 @@ Disallow: /
 User-agent: KimiBot
 Disallow: /
 
+# AI Data Scraper
+# https://knownagents.com/agents/kimicrawler
+
+User-agent: KimiCrawler
+Disallow: /
+
 # AI Assistant
 # https://knownagents.com/agents/klaviyoaibot
 
@@ -364,6 +400,12 @@ Disallow: /
 User-agent: meta-webindexer
 Disallow: /
 
+# AI Data Scraper
+# https://knownagents.com/agents/micro-crawl
+
+User-agent: micro-crawl
+Disallow: /
+
 # AI Search Crawler
 # https://knownagents.com/agents/mistralai-index
 
@@ -380,6 +422,18 @@ Disallow: /
 # https://knownagents.com/agents/mistralbot
 
 User-agent: MistralBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/moonshotbot
+
+User-agent: MoonshotBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/moonspider
+
+User-agent: MoonSpider
 Disallow: /
 
 # AI Data Scraper
@@ -443,6 +497,18 @@ User-agent: QualifiedBot
 Disallow: /
 
 # AI Data Scraper
+# https://knownagents.com/agents/qwenbot
+
+User-agent: QwenBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/salamandravlm
+
+User-agent: SalamandraVLM
+Disallow: /
+
+# AI Data Scraper
 # https://knownagents.com/agents/sbintuitionsbot
 
 User-agent: SBIntuitionsBot
@@ -464,6 +530,12 @@ Disallow: /
 # https://knownagents.com/agents/timpibot
 
 User-agent: Timpibot
+Disallow: /
+
+# AI Assistant
+# https://knownagents.com/agents/tongyibot
+
+User-agent: TongyiBot
 Disallow: /
 
 # AI Assistant
@@ -494,6 +566,24 @@ Disallow: /
 # https://knownagents.com/agents/xai-searchbot
 
 User-agent: xAI-SearchBot
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/yandexadditional
+
+User-agent: YandexAdditional
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/yandexadditionalbot
+
+User-agent: YandexAdditionalBot
+Disallow: /
+
+# AI Assistant
+# https://knownagents.com/agents/yiyanbot
+
+User-agent: YiyanBot
 Disallow: /
 
 # AI Search Crawler
