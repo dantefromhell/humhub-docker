@@ -1,0 +1,21 @@
+---
+name: Update hashpins
+
+on:
+  repository_dispatch:
+    types: release
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1, 2026-07-17
+      - uses: sshine/hashpinner@99af00c284174deee0fcd652f9c0761f9a1a850c # v0.2.0, 2026-07-28
+        with:
+          version: v0.2.0
+          mode: check
+          deep: "true"

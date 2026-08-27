@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1, 2026-07-17
       - name: Set git config
         run: |
           git config --local user.email "action@github.com"
@@ -28,12 +28,12 @@ jobs:
           git status
           git log
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c # v1.3.0, 2026-05-24
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: "${{ env.GIT_BRANCH }}"
       - name: Create Pull Request
-        uses: repo-sync/pull-request@v2
+        uses: repo-sync/pull-request@7e79a9f5dc3ad0ce53138f01df2fad14a04831c5 # v2.12.1, 2023-01-21
         with:
           source_branch: "${{ env.GIT_BRANCH }}"
           destination_branch: "master"

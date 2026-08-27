@@ -37,8 +37,8 @@ jobs:
       matrix:
         version: ["experimental", "stable", "legacy"]
     steps:
-      - uses: actions/checkout@v7
-      - uses: FranzDiebold/github-env-vars-action@v2.9.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1, 2026-07-17
+      - uses: FranzDiebold/github-env-vars-action@e8118971bd6b60524ae66a2d870bc83088e3a3c9 # v2.9.0, 2026-04-11
       - name: Set Humhub version
         run: |
           HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9a-z\.\-]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
@@ -59,7 +59,7 @@ jobs:
           docker save "ghcr.io/${CI_REPOSITORY_OWNER}/humhub:${CI_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-base" \
             | gzip > "build-${{ matrix.version }}-git-${GIT_REV}.tar.gz"
       - name: Upload image archive
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1, 2026-04-10
         with:
           name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}
           path: build-${{ matrix.version }}-git-${{ env.GIT_REV }}.tar.gz
@@ -72,8 +72,8 @@ jobs:
         version: ["experimental", "stable", "legacy"]
         target: ["allinone", "nginx", "phponly"]
     steps:
-      - uses: actions/checkout@v7
-      - uses: FranzDiebold/github-env-vars-action@v2.9.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1, 2026-07-17
+      - uses: FranzDiebold/github-env-vars-action@e8118971bd6b60524ae66a2d870bc83088e3a3c9 # v2.9.0, 2026-04-11
       - name: Set Humhub version
         run: |
           HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9a-z\.\-]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
@@ -83,7 +83,7 @@ jobs:
           export GIT_REV
           echo "GIT_REV=$GIT_REV" >> "$GITHUB_ENV"
       - name: Download image archive
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1, 2026-03-11
         with:
           name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}
       - name: Build and push docker image
@@ -98,7 +98,7 @@ jobs:
           docker save "ghcr.io/${CI_REPOSITORY_OWNER}/humhub:${CI_REF_NAME_SLUG}-${HUMHUB_VERSION}-git-${GIT_REV}-${{ matrix.target }}" \
             | gzip > "build-${{ matrix.version }}-git-${{ env.GIT_REV }}-${{ matrix.target }}.tar.gz"
       - name: Upload image archive
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1, 2026-04-10
         with:
           name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}-${{ matrix.target }}
           path: build-${{ matrix.version }}-git-${{ env.GIT_REV }}-${{ matrix.target }}.tar.gz
@@ -110,8 +110,8 @@ jobs:
       matrix:
         version: ["experimental", "stable", "legacy"]
     steps:
-      - uses: actions/checkout@v7
-      - uses: FranzDiebold/github-env-vars-action@v2.9.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1, 2026-07-17
+      - uses: FranzDiebold/github-env-vars-action@e8118971bd6b60524ae66a2d870bc83088e3a3c9 # v2.9.0, 2026-04-11
       - name: Set Humhub version
         run: |
           HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9a-z\.\-]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
@@ -121,7 +121,7 @@ jobs:
           export GIT_REV
           echo "GIT_REV=$GIT_REV" >> "$GITHUB_ENV"
       - name: Download image archive
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1, 2026-03-11
         with:
           name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}-allinone
       - name: Load images
@@ -140,7 +140,7 @@ jobs:
         if: ${{ always() }}
         run: docker compose -f docker-compose.prod.yml logs
       - name: Setup upterm SSH debugging
-        uses: mxschmitt/action-tmate@v3
+        uses: mxschmitt/action-tmate@35b54afac29c97fb54faba5b513f8fbd1882f113 # v3.24, 2026-05-29
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.ssh_debug_enabled }}
       - name: Test
         run: curl 'http://localhost:8080/' --location --fail --silent | grep 'Sign in</button>' -q || ( curl 'http://localhost:8080/'  --trace - ; exit 1;)
@@ -160,8 +160,8 @@ jobs:
       matrix:
         version: ["experimental", "stable", "legacy"]
     steps:
-      - uses: actions/checkout@v7
-      - uses: FranzDiebold/github-env-vars-action@v2.9.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1, 2026-07-17
+      - uses: FranzDiebold/github-env-vars-action@e8118971bd6b60524ae66a2d870bc83088e3a3c9 # v2.9.0, 2026-04-11
       - name: Set Humhub version
         run: |
           HUMHUB_VERSION="$(awk -e '$0 ~ /^([0-9a-z\.\-]+) [0-9\.]+ ${{ matrix.version }}/ {print $1}' versions.txt)"
@@ -171,11 +171,11 @@ jobs:
           export GIT_REV
           echo "GIT_REV=$GIT_REV" >> "$GITHUB_ENV"
       - name: Download image archive (phponly)
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1, 2026-03-11
         with:
           name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}-phponly
       - name: Download image archive (nginx)
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1, 2026-03-11
         with:
           name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}-nginx
       - name: Load images
@@ -197,7 +197,7 @@ jobs:
         if: ${{ always() }}
         run: docker compose -f docker-compose.prod.yml logs
       - name: Setup upterm SSH debugging
-        uses: mxschmitt/action-tmate@v3
+        uses: mxschmitt/action-tmate@35b54afac29c97fb54faba5b513f8fbd1882f113 # v3.24, 2026-05-29
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.ssh_debug_enabled }}
       - name: Test
         run: curl 'http://localhost:8080/' --location --fail --silent | grep 'Sign in</button>' -q || ( curl 'http://localhost:8080/'  --trace - ; exit 1;)
@@ -219,8 +219,8 @@ jobs:
         version: ["experimental", "stable", "legacy"]
         target: ["allinone"]
     steps:
-      - uses: actions/checkout@v7
-      - uses: FranzDiebold/github-env-vars-action@v2.9.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1, 2026-07-17
+      - uses: FranzDiebold/github-env-vars-action@e8118971bd6b60524ae66a2d870bc83088e3a3c9 # v2.9.0, 2026-04-11
       - name: Login to registry
         run: echo "${{ secrets.PAT }}" | docker login ghcr.io --username "${GITHUB_REPOSITORY_OWNER}" --password-stdin
       - name: Set Humhub version
@@ -232,7 +232,7 @@ jobs:
           export GIT_REV
           echo "GIT_REV=$GIT_REV" >> "$GITHUB_ENV"
       - name: Download image archive
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1, 2026-03-11
         with:
           name: build-${{ matrix.version }}-git-${{ env.GIT_REV }}-${{ matrix.target }}
       - name: Load, retag and Push images
