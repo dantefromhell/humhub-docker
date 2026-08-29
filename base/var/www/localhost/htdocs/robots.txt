@@ -23,6 +23,18 @@ User-agent: Ai2Bot-Dolma
 Disallow: /
 
 # AI Search Crawler
+# https://knownagents.com/agents/aiwebindex
+
+User-agent: AIWebIndex
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/aiwebindex-agent
+
+User-agent: AIWebIndex-Agent
+Disallow: /
+
+# AI Search Crawler
 # https://knownagents.com/agents/amazon-kendra
 
 User-agent: amazon-kendra
@@ -509,6 +521,12 @@ User-agent: QwenBot
 Disallow: /
 
 # AI Data Scraper
+# https://knownagents.com/agents/reflectionbot
+
+User-agent: Reflectionbot
+Disallow: /
+
+# AI Data Scraper
 # https://knownagents.com/agents/salamandravlm
 
 User-agent: SalamandraVLM
@@ -530,6 +548,12 @@ Disallow: /
 # https://knownagents.com/agents/spider
 
 User-agent: Spider
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/talarionsearchbot
+
+User-agent: TalarionSearchBot
 Disallow: /
 
 # AI Data Scraper
