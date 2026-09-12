@@ -610,6 +610,12 @@ Disallow: /
 User-agent: YandexAdditionalBot
 Disallow: /
 
+# AI Search Crawler
+# https://knownagents.com/agents/yepbot
+
+User-agent: YepBot
+Disallow: /
+
 # AI Assistant
 # https://knownagents.com/agents/yiyanbot
 
