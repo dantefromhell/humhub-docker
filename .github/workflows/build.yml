@@ -143,7 +143,7 @@ jobs:
         uses: mxschmitt/action-tmate@35b54afac29c97fb54faba5b513f8fbd1882f113 # v3.24, 2026-05-29
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.ssh_debug_enabled }}
       - name: Test
-        run: curl 'http://localhost:8080/' --location --fail --silent | grep 'Sign in</button>' -q || ( curl 'http://localhost:8080/' --location --trace - ; exit 1;)
+        run: curl 'http://localhost:8080/' --location --fail --silent | grep --ignore-case '<body class="login-container">' --silent || ( curl 'http://localhost:8080/' --location --trace - ; exit 1;)
       - name: Test Email
         run:
           docker compose exec -T humhub php /var/www/localhost/htdocs/protected/yii test/email 'test@example.com' --interactive=0 \
@@ -200,7 +200,7 @@ jobs:
         uses: mxschmitt/action-tmate@35b54afac29c97fb54faba5b513f8fbd1882f113 # v3.24, 2026-05-29
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.ssh_debug_enabled }}
       - name: Test
-        run: curl 'http://localhost:8080/' --location --fail --silent | grep 'Sign in</button>' -q || ( curl 'http://localhost:8080/' --location --trace - ; exit 1;)
+        run: curl 'http://localhost:8080/' --location --fail --silent | grep --ignore-case '<body class="login-container">' --silent || ( curl 'http://localhost:8080/' --location --trace - ; exit 1;)
       - name: Test Email
         run: |
           docker compose exec -T humhub php /var/www/localhost/htdocs/protected/yii test/email 'test@example.com' --interactive=0 \
