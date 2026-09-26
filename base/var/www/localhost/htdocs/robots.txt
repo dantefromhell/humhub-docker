@@ -65,6 +65,12 @@ User-agent: Amzn-User
 Disallow: /
 
 # AI Search Crawler
+# https://knownagents.com/agents/andiagent
+
+User-agent: AndiAgent
+Disallow: /
+
+# AI Search Crawler
 # https://knownagents.com/agents/anomura
 
 User-agent: Anomura
@@ -104,6 +110,12 @@ Disallow: /
 # https://knownagents.com/agents/azureai-searchbot
 
 User-agent: AzureAI-SearchBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/beansllm-corpusbot
+
+User-agent: BeansLLM-CorpusBot
 Disallow: /
 
 # AI Data Scraper
@@ -226,6 +238,12 @@ Disallow: /
 User-agent: DeepSeekBot
 Disallow: /
 
+# AI Search Crawler
+# https://knownagents.com/agents/dola-searchbot
+
+User-agent: Dola-SearchBot
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/doubaobot
 
@@ -305,6 +323,24 @@ User-agent: GPTBot
 Disallow: /
 
 # Undocumented AI Agent
+# https://knownagents.com/agents/grok-agent
+
+User-agent: grok-agent
+Disallow: /
+
+# Undocumented AI Agent
+# https://knownagents.com/agents/grokbot
+
+User-agent: GrokBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/hunyuan
+
+User-agent: Hunyuan
+Disallow: /
+
+# Undocumented AI Agent
 # https://knownagents.com/agents/iaskbot
 
 User-agent: iAskBot
@@ -326,6 +362,12 @@ Disallow: /
 # https://knownagents.com/agents/imagespider
 
 User-agent: imageSpider
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/isonsearchbot
+
+User-agent: IsonSearchBot
 Disallow: /
 
 # AI Assistant
@@ -521,9 +563,15 @@ User-agent: QwenBot
 Disallow: /
 
 # AI Data Scraper
+# https://knownagents.com/agents/recraft-image-dataset
+
+User-agent: recraft-image-dataset
+Disallow: /
+
+# AI Data Scraper
 # https://knownagents.com/agents/reflectionbot
 
-User-agent: Reflectionbot
+User-agent: ReflectionBot
 Disallow: /
 
 # AI Data Scraper
@@ -542,6 +590,12 @@ Disallow: /
 # https://knownagents.com/agents/shap-user
 
 User-agent: Shap-User
+Disallow: /
+
+# Undocumented AI Agent
+# https://knownagents.com/agents/somethinggbot
+
+User-agent: SomethinggBot
 Disallow: /
 
 # AI Data Scraper
@@ -592,6 +646,12 @@ Disallow: /
 User-agent: WRTNBot
 Disallow: /
 
+# Undocumented AI Agent
+# https://knownagents.com/agents/xai-grok
+
+User-agent: xAI-Grok
+Disallow: /
+
 # AI Search Crawler
 # https://knownagents.com/agents/xai-searchbot
 
@@ -614,6 +674,12 @@ Disallow: /
 # https://knownagents.com/agents/yepbot
 
 User-agent: YepBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/yibot
+
+User-agent: YiBot
 Disallow: /
 
 # AI Assistant
