@@ -359,6 +359,12 @@ User-agent: ICC-Crawler
 Disallow: /
 
 # AI Data Scraper
+# https://knownagents.com/agents/imagebot
+
+User-agent: ImageBot
+Disallow: /
+
+# AI Data Scraper
 # https://knownagents.com/agents/imagespider
 
 User-agent: imageSpider
