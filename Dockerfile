@@ -77,7 +77,8 @@ ARG HUMHUB_VERSION
 ARG BUILD_DEPS
 ARG PHP_VERSION
 
-RUN apk add --no-cache --update $BUILD_DEPS && \
+RUN apk upgrade --force-refresh --latest && \
+    apk add --no-cache --update $BUILD_DEPS && \
     ln -s /usr/bin/php$PHP_VERSION /usr/bin/php && \
     rm -rf /var/cache/apk/*
 
@@ -120,7 +121,8 @@ LABEL name="HumHub" version="${HUMHUB_VERSION}-git-${VCS_REF}" variant="base" \
       org.label-schema.schema-version="1.0" \
       org.opencontainers.image.source="https://github.com/dantefromhell/humhub-docker"
 
-RUN apk add --no-cache --update $RUNTIME_DEPS && \
+RUN apk upgrade --force-refresh --latest && \
+    apk add --no-cache --update $RUNTIME_DEPS && \
     apk add --no-cache --virtual temp_pkgs gettext && \
     ln -s /usr/bin/php$PHP_VERSION /usr/bin/php && \
     ln -s /usr/sbin/php-fpm$PHP_VERSION /usr/sbin/php-fpm && \
