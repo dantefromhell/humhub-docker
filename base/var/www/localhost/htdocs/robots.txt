@@ -185,9 +185,15 @@ User-agent: ClaudeBot
 Disallow: /
 
 # AI Search Crawler
-# https://knownagents.com/agents/cloudflare-autorag
+# https://knownagents.com/agents/cloudflare-ai-search
 
-User-agent: Cloudflare-AutoRAG
+User-agent: Cloudflare-AI-Search
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/cloudflare-ai-search-external
+
+User-agent: Cloudflare-AI-Search-External
 Disallow: /
 
 # AI Data Scraper
@@ -256,6 +262,18 @@ Disallow: /
 User-agent: DuckAssistBot
 Disallow: /
 
+# AI Assistant
+# https://knownagents.com/agents/elevenlabsbot
+
+User-agent: ElevenlabsBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/elevenlabscrawler
+
+User-agent: ElevenlabsCrawler
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/erniebot
 
@@ -266,6 +284,12 @@ Disallow: /
 # https://knownagents.com/agents/exasearchbot
 
 User-agent: ExaSearchBot
+Disallow: /
+
+# AI Assistant
+# https://knownagents.com/agents/exauser
+
+User-agent: ExaUser
 Disallow: /
 
 # AI Data Scraper
@@ -368,12 +392,6 @@ Disallow: /
 # https://knownagents.com/agents/imagespider
 
 User-agent: imageSpider
-Disallow: /
-
-# AI Search Crawler
-# https://knownagents.com/agents/isonsearchbot
-
-User-agent: IsonSearchBot
 Disallow: /
 
 # AI Assistant
