@@ -71,6 +71,12 @@ User-agent: AndiAgent
 Disallow: /
 
 # AI Search Crawler
+# https://knownagents.com/agents/andibot
+
+User-agent: AndiBot
+Disallow: /
+
+# AI Search Crawler
 # https://knownagents.com/agents/anomura
 
 User-agent: Anomura
@@ -220,6 +226,12 @@ Disallow: /
 User-agent: CohereBot
 Disallow: /
 
+# AI Search Crawler
+# https://knownagents.com/agents/context7-crawler
+
+User-agent: Context7-Crawler
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/cotoyogi
 
@@ -244,6 +256,18 @@ Disallow: /
 User-agent: DeepSeekBot
 Disallow: /
 
+# AI Assistant
+# https://knownagents.com/agents/diffbot-user
+
+User-agent: Diffbot-User
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/digitaloceangradientaicrawler
+
+User-agent: DigitalOceanGradientAICrawler
+Disallow: /
+
 # AI Search Crawler
 # https://knownagents.com/agents/dola-searchbot
 
@@ -260,6 +284,12 @@ Disallow: /
 # https://knownagents.com/agents/duckassistbot
 
 User-agent: DuckAssistBot
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/element451bot
+
+User-agent: Element451Bot
 Disallow: /
 
 # AI Assistant
@@ -323,6 +353,12 @@ User-agent: Google-Extended
 Disallow: /
 
 # AI Assistant
+# https://knownagents.com/agents/google-gemininotebook
+
+User-agent: Google-GeminiNotebook
+Disallow: /
+
+# AI Assistant
 # https://knownagents.com/agents/google-notebooklm
 
 User-agent: Google-NotebookLM
@@ -341,6 +377,18 @@ User-agent: GoogleOther
 Disallow: /
 
 # AI Data Scraper
+# https://knownagents.com/agents/googleother-image
+
+User-agent: GoogleOther-Image
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/googleother-video
+
+User-agent: GoogleOther-Video
+Disallow: /
+
+# AI Data Scraper
 # https://knownagents.com/agents/gptbot
 
 User-agent: GPTBot
@@ -356,6 +404,18 @@ Disallow: /
 # https://knownagents.com/agents/grokbot
 
 User-agent: GrokBot
+Disallow: /
+
+# AI Assistant
+# https://knownagents.com/agents/haiku-searchbot
+
+User-agent: Haiku-SearchBot
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/haikubot
+
+User-agent: HaikuBot
 Disallow: /
 
 # AI Data Scraper
@@ -407,6 +467,18 @@ User-agent: Kangaroo Bot
 Disallow: /
 
 # AI Search Crawler
+# https://knownagents.com/agents/karlacrawler
+
+User-agent: KarlaCrawler
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/kernelsearchbot
+
+User-agent: KernelSearchBot
+Disallow: /
+
+# AI Search Crawler
 # https://knownagents.com/agents/kimi-searchbot
 
 User-agent: Kimi-SearchBot
@@ -455,6 +527,12 @@ User-agent: LCC
 Disallow: /
 
 # AI Assistant
+# https://knownagents.com/agents/liner-user
+
+User-agent: Liner-User
+Disallow: /
+
+# AI Assistant
 # https://knownagents.com/agents/linerbot
 
 User-agent: LinerBot
@@ -496,6 +574,12 @@ Disallow: /
 User-agent: MistralAI-Index
 Disallow: /
 
+# AI Data Scraper
+# https://knownagents.com/agents/mistralai-training
+
+User-agent: MistralAI-Training
+Disallow: /
+
 # AI Assistant
 # https://knownagents.com/agents/mistralai-user
 
@@ -520,6 +604,12 @@ Disallow: /
 User-agent: MoonSpider
 Disallow: /
 
+# AI Search Crawler
+# https://knownagents.com/agents/navubot
+
+User-agent: NavuBot
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/netestate-imprint-crawler
 
@@ -536,6 +626,12 @@ Disallow: /
 # https://knownagents.com/agents/omgili
 
 User-agent: omgili
+Disallow: /
+
+# AI Search Crawler
+# https://knownagents.com/agents/onirococrawler
+
+User-agent: OnirocoCrawler
 Disallow: /
 
 # AI Data Scraper
@@ -574,6 +670,12 @@ Disallow: /
 User-agent: Poggio-Citations
 Disallow: /
 
+# AI Search Crawler
+# https://knownagents.com/agents/proratainc
+
+User-agent: ProRataInc
+Disallow: /
+
 # AI Assistant
 # https://knownagents.com/agents/qualifiedbot
 
@@ -595,7 +697,7 @@ Disallow: /
 # AI Data Scraper
 # https://knownagents.com/agents/reflectionbot
 
-User-agent: ReflectionBot
+User-agent: Reflectionbot
 Disallow: /
 
 # AI Data Scraper
