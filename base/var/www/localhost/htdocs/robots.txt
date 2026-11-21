@@ -622,6 +622,12 @@ Disallow: /
 User-agent: OAI-SearchBot
 Disallow: /
 
+# AI Search Crawler
+# https://knownagents.com/agents/octensearchbot
+
+User-agent: OctenSearchBot
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/omgili
 
@@ -701,6 +707,12 @@ User-agent: Reflectionbot
 Disallow: /
 
 # AI Data Scraper
+# https://knownagents.com/agents/riverbot
+
+User-agent: RiverBot
+Disallow: /
+
+# AI Data Scraper
 # https://knownagents.com/agents/salamandravlm
 
 User-agent: SalamandraVLM
@@ -722,6 +734,12 @@ Disallow: /
 # https://knownagents.com/agents/somethinggbot
 
 User-agent: SomethinggBot
+Disallow: /
+
+# AI Data Scraper
+# https://knownagents.com/agents/speridlabsresearchcrawler
+
+User-agent: SperidLabsResearchCrawler
 Disallow: /
 
 # AI Data Scraper
